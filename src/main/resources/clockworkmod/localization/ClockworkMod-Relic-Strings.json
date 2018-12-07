@@ -1,0 +1,10 @@
+{
+  "Clockwork:MomentumEngine": {
+    "NAME": "Momentum Engine",
+    "FLAVOR": "Provides the power to keep on going.",
+    "DESCRIPTIONS": [
+      "At the start of combat, gain #b",
+      " Momentum."
+    ]
+  }
+}

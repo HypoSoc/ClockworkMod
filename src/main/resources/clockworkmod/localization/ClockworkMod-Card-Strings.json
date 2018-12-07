@@ -1,0 +1,18 @@
+{
+  "Clockwork:Strike": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! Damage."
+  },
+
+  "Clockwork:Shield": {
+    "NAME": "Shield",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+
+  "Placeholder": {
+    "NAME": "",
+    "DESCRIPTION": "",
+    "UPGRADE_DESCRIPTION": "",
+    "EXTENDED_DESCRIPTION": [""]
+  }
+}
