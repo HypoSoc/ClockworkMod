@@ -13,8 +13,8 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 public class MomentumPower extends AbstractClockworkPower {
     private static final String POWER_ID = getID("Momentum");
     private static final PowerStrings strings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
-    private static final String IMG = "powers/momentum.png";
-    private static final String IMG2 = "powers/momentum2.png";
+    private static final Texture IMG = new Texture(ClockworkMod.getResourcePath("powers/momentum.png"));
+    private static final Texture IMG2 = new Texture(ClockworkMod.getResourcePath("powers/momentum2.png"));
 
     private boolean left = true;
 
@@ -23,7 +23,7 @@ public class MomentumPower extends AbstractClockworkPower {
         this.ID = POWER_ID;
         this.owner = owner;
 
-        this.img = new Texture(ClockworkMod.getResourcePath(IMG));
+        this.img = IMG;
         this.type = PowerType.BUFF;
         this.amount = amount;
         this.updateDescription();
@@ -37,7 +37,7 @@ public class MomentumPower extends AbstractClockworkPower {
     @Override
     public void atStartOfTurn() {
         this.left = true;
-        this.img = new Texture(ClockworkMod.getResourcePath(IMG));
+        this.img = IMG;
     }
 
     @Override
@@ -53,12 +53,12 @@ public class MomentumPower extends AbstractClockworkPower {
         }
         if(this.left){
             this.left = false;
-            this.img = new Texture(ClockworkMod.getResourcePath(IMG2));
+            this.img = IMG2;
             ClockworkMod.TICK.play(Settings.SOUND_VOLUME * Settings.MASTER_VOLUME * 120);
         }
         else {
             this.left = true;
-            this.img = new Texture(ClockworkMod.getResourcePath(IMG));
+            this.img = IMG;
             ClockworkMod.TOCK.play(Settings.SOUND_VOLUME * Settings.MASTER_VOLUME * 120);
         }
     }

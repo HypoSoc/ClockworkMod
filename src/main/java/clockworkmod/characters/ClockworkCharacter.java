@@ -60,7 +60,7 @@ public class ClockworkCharacter extends CustomPlayer {
                 getLoadout(), 20.0F, -10.0F, 220.0F, 290.0F, new EnergyManager(ENERGY_PER_TURN));
 
         this.loadAnimation(ClockworkMod.getResourcePath(SKELETON_ATLAS), ClockworkMod.getResourcePath(SKELETON_JSON), 1.0f);
-        AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
+        AnimationState.TrackEntry e = this.state.setAnimation(0, "idle", true);
         e.setTime(e.getEndTime() * MathUtils.random());
     }
 

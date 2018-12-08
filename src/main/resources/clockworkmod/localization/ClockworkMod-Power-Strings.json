@@ -5,5 +5,12 @@
       "After you play a card, increase its damage and block by #b",
       " for the rest of combat."
     ]
+  },
+  "Clockwork:Stasis": {
+    "NAME": "Stasis",
+    "DESCRIPTIONS": [
+      "Prevent all damage that would be dealt to or by you for #b",
+      " turn.", " turns."
+    ]
   }
 }
