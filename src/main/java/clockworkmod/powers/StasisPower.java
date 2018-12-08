@@ -26,6 +26,8 @@ public class StasisPower extends AbstractClockworkPower implements DamageConditi
         this.amount = amount;
         this.updateDescription();
 
+        this.priority = 100;
+
         this.isTurnBased = true;
     }
 
