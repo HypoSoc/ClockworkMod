@@ -9,6 +9,12 @@
     "DESCRIPTION": "Gain !B! Block."
   },
 
+  "Clockwork:WarmUp": {
+    "NAME": "Warm Up",
+    "DESCRIPTION": "Innate. Cannot be played after other cards in a turn. NL Gain !M! Stasis. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": ["I have already played a card this turn."]
+  },
+
   "Placeholder": {
     "NAME": "",
     "DESCRIPTION": "",

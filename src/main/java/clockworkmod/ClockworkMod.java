@@ -1,9 +1,11 @@
 package clockworkmod;
 
 import basemod.BaseMod;
+import basemod.helpers.BaseModCardTags;
 import basemod.interfaces.*;
 import clockworkmod.cards.Shield;
 import clockworkmod.cards.Strike;
+import clockworkmod.cards.WarmUp;
 import clockworkmod.characters.ClockworkCharacter;
 import clockworkmod.patches.AbstractCardEnum;
 import clockworkmod.patches.ClockworkEnum;
@@ -83,6 +85,7 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
         //Basic
         BaseMod.addCard(new Shield());
         BaseMod.addCard(new Strike());
+        BaseMod.addCard(new WarmUp());
     }
 
     @Override

@@ -75,6 +75,7 @@ public class ClockworkCharacter extends CustomPlayer {
         retVal.add("Clockwork:Shield");
         retVal.add("Clockwork:Shield");
         retVal.add("Clockwork:Shield");
+        retVal.add("Clockwork:WarmUp");
         return retVal;
     }
 
