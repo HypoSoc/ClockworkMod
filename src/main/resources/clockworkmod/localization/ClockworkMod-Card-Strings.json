@@ -1,4 +1,9 @@
 {
+  "Clockwork:ChargingBlade": {
+    "NAME": "Charging Blade",
+    "DESCRIPTION": "Deal !D! damage. NL Every time this card is played, increase its damage by !M! for this combat.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Every time this card is played, increase its damage by !M! for this combat. NL Rebound."
+  },
 
   "Clockwork:Shield": {
     "NAME": "Shield",
@@ -7,12 +12,12 @@
 
   "Clockwork:StasisBreak": {
     "NAME": "Stasis Break",
-    "DESCRIPTION": "Innate. NL Deal !D! Damage. NL Ignores the effect of Stasis."
+    "DESCRIPTION": "Innate. NL Deal !D! damage. NL Ignores the effect of Stasis."
   },
 
   "Clockwork:Strike": {
     "NAME": "Strike",
-    "DESCRIPTION": "Deal !D! Damage."
+    "DESCRIPTION": "Deal !D! damage."
   },
 
   "Clockwork:WarmUp": {

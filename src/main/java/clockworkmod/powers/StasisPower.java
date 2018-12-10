@@ -1,7 +1,7 @@
 package clockworkmod.powers;
 
 import clockworkmod.ClockworkMod;
-import clockworkmod.cards.IgnoreStasisCard;
+import clockworkmod.fields.IgnoreStasisField;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
@@ -66,7 +66,7 @@ public class StasisPower extends AbstractClockworkPower implements DamageConditi
 
     @Override
     public float atFinalDamageConditionalGive(float damage,  AbstractCard ca, AbstractMonster mo, DamageInfo.DamageType type) {
-        if(mo != null && !(ca instanceof IgnoreStasisCard)) {
+        if(mo != null && !IgnoreStasisField.ignoreStasis.get(ca)) {
             return 0;
         }
         return damage;
