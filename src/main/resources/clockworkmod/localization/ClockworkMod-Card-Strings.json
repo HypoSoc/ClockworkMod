@@ -1,12 +1,18 @@
 {
-  "Clockwork:Strike": {
-    "NAME": "Strike",
-    "DESCRIPTION": "Deal !D! Damage."
-  },
 
   "Clockwork:Shield": {
     "NAME": "Shield",
     "DESCRIPTION": "Gain !B! Block."
+  },
+
+  "Clockwork:StasisBreak": {
+    "NAME": "Stasis Break",
+    "DESCRIPTION": "Innate. NL Deal !D! Damage. NL Ignores the effect of Stasis."
+  },
+
+  "Clockwork:Strike": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! Damage."
   },
 
   "Clockwork:WarmUp": {

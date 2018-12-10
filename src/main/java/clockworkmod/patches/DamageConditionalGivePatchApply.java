@@ -17,7 +17,7 @@ public class DamageConditionalGivePatchApply {
     public static SpireReturn Insert(AbstractCard abstractCard, AbstractPower p, @ByRef float[] tmp) {
         if(p instanceof DamageConditionalGivePower) {
             float tmpcpy = tmp[0];
-            tmp[0] = ((DamageConditionalGivePower)p).atDamageConditionalGive(tmpcpy,
+            tmp[0] = ((DamageConditionalGivePower)p).atDamageConditionalGive(tmpcpy, abstractCard,
                     null, abstractCard.damageTypeForTurn);
         }
         return SpireReturn.Continue();
@@ -30,7 +30,7 @@ public class DamageConditionalGivePatchApply {
     public static SpireReturn FinalInsert(AbstractCard abstractCard, AbstractPower p, @ByRef float[] tmp) {
         if(p instanceof DamageConditionalGivePower) {
             float tmpcpy = tmp[0];
-            tmp[0] = ((DamageConditionalGivePower)p).atFinalDamageConditionalGive(tmpcpy,
+            tmp[0] = ((DamageConditionalGivePower)p).atFinalDamageConditionalGive(tmpcpy, abstractCard,
                     null, abstractCard.damageTypeForTurn);
         }
         return SpireReturn.Continue();
@@ -43,7 +43,7 @@ public class DamageConditionalGivePatchApply {
     public static SpireReturn MultiInsert(AbstractCard abstractCard, AbstractPower p, float[] tmp, int i) {
         if(p instanceof DamageConditionalGivePower) {
             float tmpcpy = tmp[i];
-            tmp[i] = ((DamageConditionalGivePower)p).atDamageConditionalGive(tmpcpy,
+            tmp[i] = ((DamageConditionalGivePower)p).atDamageConditionalGive(tmpcpy, abstractCard,
                     null, abstractCard.damageTypeForTurn);
         }
         return SpireReturn.Continue();
@@ -56,7 +56,7 @@ public class DamageConditionalGivePatchApply {
     public static SpireReturn MultiFinalInsert(AbstractCard abstractCard, AbstractPower p, float[] tmp, int i) {
         if(p instanceof DamageConditionalGivePower) {
             float tmpcpy = tmp[i];
-            tmp[i] = ((DamageConditionalGivePower)p).atFinalDamageConditionalGive(tmpcpy,
+            tmp[i] = ((DamageConditionalGivePower)p).atFinalDamageConditionalGive(tmpcpy, abstractCard,
                     null, abstractCard.damageTypeForTurn);
         }
         return SpireReturn.Continue();

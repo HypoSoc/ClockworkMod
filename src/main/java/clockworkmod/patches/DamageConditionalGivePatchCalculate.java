@@ -17,7 +17,7 @@ public class DamageConditionalGivePatchCalculate {
                                      AbstractPower p, @ByRef float[] tmp) {
         if(p instanceof DamageConditionalGivePower) {
             float tmpcpy = tmp[0];
-            tmp[0] = ((DamageConditionalGivePower)p).atDamageConditionalGive(tmpcpy,
+            tmp[0] = ((DamageConditionalGivePower)p).atDamageConditionalGive(tmpcpy, abstractCard,
                     mo, abstractCard.damageTypeForTurn);
         }
         return SpireReturn.Continue();
@@ -31,7 +31,7 @@ public class DamageConditionalGivePatchCalculate {
                                           AbstractPower p, @ByRef float[] tmp) {
         if(p instanceof DamageConditionalGivePower) {
             float tmpcpy = tmp[0];
-            tmp[0] = ((DamageConditionalGivePower)p).atFinalDamageConditionalGive(tmpcpy,
+            tmp[0] = ((DamageConditionalGivePower)p).atFinalDamageConditionalGive(tmpcpy, abstractCard,
                     mo, abstractCard.damageTypeForTurn);
         }
         return SpireReturn.Continue();
@@ -45,7 +45,7 @@ public class DamageConditionalGivePatchCalculate {
                                      AbstractPower p, float[] tmp, int i) {
         if(p instanceof DamageConditionalGivePower) {
             float tmpcpy = tmp[i];
-            tmp[i] = ((DamageConditionalGivePower)p).atDamageConditionalGive(tmpcpy,
+            tmp[i] = ((DamageConditionalGivePower)p).atDamageConditionalGive(tmpcpy, abstractCard,
                     AbstractDungeon.getCurrRoom().monsters.monsters.get(i), abstractCard.damageTypeForTurn);
         }
         return SpireReturn.Continue();
@@ -59,7 +59,7 @@ public class DamageConditionalGivePatchCalculate {
                                           AbstractPower p, float[] tmp, int i) {
         if(p instanceof DamageConditionalGivePower) {
             float tmpcpy = tmp[i];
-            tmp[i] = ((DamageConditionalGivePower)p).atFinalDamageConditionalGive(tmpcpy,
+            tmp[i] = ((DamageConditionalGivePower)p).atFinalDamageConditionalGive(tmpcpy, abstractCard,
                     AbstractDungeon.getCurrRoom().monsters.monsters.get(i), abstractCard.damageTypeForTurn);
         }
         return SpireReturn.Continue();

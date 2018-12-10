@@ -4,6 +4,7 @@ import basemod.BaseMod;
 import basemod.helpers.BaseModCardTags;
 import basemod.interfaces.*;
 import clockworkmod.cards.Shield;
+import clockworkmod.cards.StasisBreak;
 import clockworkmod.cards.Strike;
 import clockworkmod.cards.WarmUp;
 import clockworkmod.characters.ClockworkCharacter;
@@ -86,6 +87,25 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
         BaseMod.addCard(new Shield());
         BaseMod.addCard(new Strike());
         BaseMod.addCard(new WarmUp());
+
+        //Common Attacks
+
+        //Common Skills
+
+        //Uncommon Attacks
+        BaseMod.addCard(new StasisBreak());
+
+        //Uncommon Skills
+
+        //Uncommon Powers
+
+        //Rare Attacks
+
+        //Rare Skills
+
+        //Rare Powers
+
+        //Special
     }
 
     @Override
@@ -108,5 +128,8 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
     public void receiveEditKeywords() {
         BaseMod.addKeyword("Momentum", new String[]{"momentum", "Momentum"},
                 "After you play a card, increase its damage and block for the rest of combat.");
+
+        BaseMod.addKeyword("Stasis", new String[]{"stasis", "Stasis"},
+                "Prevent all damage that would dealt to or by you while you are in stasis.");
     }
 }

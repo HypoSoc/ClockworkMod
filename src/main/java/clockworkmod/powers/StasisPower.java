@@ -1,9 +1,11 @@
 package clockworkmod.powers;
 
 import clockworkmod.ClockworkMod;
+import clockworkmod.cards.IgnoreStasisCard;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -12,7 +14,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class StasisPower extends AbstractClockworkPower implements DamageConditionalGivePower {
-    private static final String POWER_ID = getID("Stasis");
+    public static final String POWER_ID = getID("Stasis");
     private static final PowerStrings strings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     private static final Texture IMG = new Texture(ClockworkMod.getResourcePath("powers/stasis.png"));
 
@@ -58,13 +60,13 @@ public class StasisPower extends AbstractClockworkPower implements DamageConditi
     }
 
     @Override
-    public float atDamageConditionalGive(float damage, AbstractMonster mo, DamageInfo.DamageType type) {
+    public float atDamageConditionalGive(float damage, AbstractCard ca, AbstractMonster mo, DamageInfo.DamageType type) {
         return damage;
     }
 
     @Override
-    public float atFinalDamageConditionalGive(float damage, AbstractMonster mo, DamageInfo.DamageType type) {
-        if(mo != null) {
+    public float atFinalDamageConditionalGive(float damage,  AbstractCard ca, AbstractMonster mo, DamageInfo.DamageType type) {
+        if(mo != null && !(ca instanceof IgnoreStasisCard)) {
             return 0;
         }
         return damage;
