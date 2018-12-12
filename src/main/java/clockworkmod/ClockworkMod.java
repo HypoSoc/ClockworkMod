@@ -85,9 +85,12 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
         BaseMod.addCard(new WarmUp());
 
         //Common Attacks
+        BaseMod.addCard(new AdaptiveCannon());
         BaseMod.addCard(new ChargingBlade());
 
         //Common Skills
+        BaseMod.addCard(new AdaptiveShield());
+        BaseMod.addCard(new ChargingShield());
 
         //Uncommon Attacks
         BaseMod.addCard(new StasisBreak());
@@ -103,6 +106,9 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
         //Rare Powers
 
         //Special
+        BaseMod.addCard(new DefectiveCog());
+        BaseMod.addCard(new HelicalCog());
+        BaseMod.addCard(new SpurCog());
     }
 
     @Override

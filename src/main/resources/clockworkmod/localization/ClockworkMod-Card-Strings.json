@@ -1,8 +1,36 @@
 {
+  "Clockwork:AdaptiveCannon": {
+    "NAME": "Adaptive Cannon",
+    "DESCRIPTION": "Deal !D! damage. NL Whenever you play this card, reduce its cost by !M! for this combat."
+  },
+
+  "Clockwork:AdaptiveShield": {
+    "NAME": "Adaptive Shield",
+    "DESCRIPTION": "Gain !B! Block. NL Whenever you play this card, reduce its cost by !M! for this combat."
+  },
+
   "Clockwork:ChargingBlade": {
     "NAME": "Charging Blade",
     "DESCRIPTION": "Deal !D! damage. NL Every time this card is played, increase its damage by !M! for this combat.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Every time this card is played, increase its damage by !M! for this combat. NL Rebound."
+  },
+
+  "Clockwork:ChargingShield": {
+    "NAME": "Charging Shield",
+    "DESCRIPTION": "Gain !B! Block. NL Every time this card is played, increase its Block by !M! for this combat.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Black. NL Every time this card is played, increase its Block by !M! for this combat. NL Rebound."
+  },
+
+  "Clockwork:DefectiveCog": {
+    "NAME": "Defective Cog",
+    "DESCRIPTION": "Draw !M! card. NL When this card is exhausted, deal !D! damage to ALL enemies. NL Exhaustive !stslib:ex!.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL When this card is exhausted, deal !D! damage to ALL enemies. NL Exhaustive !stslib:ex!."
+  },
+
+  "Clockwork:HelicalCog": {
+    "NAME": "Helical Cog",
+    "DESCRIPTION": "Gain !B! Block. NL Draw !M! card. NL Exhaustive !stslib:ex!.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Draw !M! cards. NL Exhaustive !stslib:ex!."
   },
 
   "Clockwork:Shield": {
@@ -18,6 +46,12 @@
   "Clockwork:Strike": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage."
+  },
+
+  "Clockwork:SpurCog": {
+    "NAME": "Spur Cog",
+    "DESCRIPTION": "Deal !D! damage. NL Draw !M! card. NL Exhaustive !stslib:ex!.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Draw !M! cards. NL Exhaustive !stslib:ex!."
   },
 
   "Clockwork:WarmUp": {
