@@ -21,6 +21,11 @@
     "UPGRADE_DESCRIPTION": "Gain !B! Black. NL Every time this card is played, increase its Block by !M! for this combat. NL Rebound."
   },
 
+  "Clockwork:CogToss": {
+    "NAME": "Cog Toss",
+    "DESCRIPTION": "Deal !D! damage. NL Add !M! Cogs to your draw pile. NL Exhaustive !stslib:ex!."
+  },
+
   "Clockwork:DefectiveCog": {
     "NAME": "Defective Cog",
     "DESCRIPTION": "Draw !M! card. NL When this card is exhausted, deal !D! damage to ALL enemies. NL Exhaustive !stslib:ex!.",

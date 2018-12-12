@@ -23,7 +23,7 @@ public class DefectiveCog extends AbstractClockworkCard {
     private static final CardTarget TARGET = CardTarget.SELF;
 
     private static final int COST = 0;
-    private static final int POWER = 15;
+    private static final int POWER = 20;
     private static final int MAGIC = 1;
     private static final int UPGRADE_BONUS = 1;
 

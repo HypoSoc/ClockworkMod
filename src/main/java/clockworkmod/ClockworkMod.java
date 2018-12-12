@@ -91,6 +91,7 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
         //Common Skills
         BaseMod.addCard(new AdaptiveShield());
         BaseMod.addCard(new ChargingShield());
+        BaseMod.addCard(new CogToss());
 
         //Uncommon Attacks
         BaseMod.addCard(new StasisBreak());
@@ -129,6 +130,9 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
 
     @Override
     public void receiveEditKeywords() {
+        BaseMod.addKeyword(new String[]{"cog", "Cog", "cogs", "Cogs"},
+                "Cogs are 0 cost cards with minor effects that draw you cards.");
+
         BaseMod.addKeyword("Momentum", new String[]{"momentum", "Momentum"},
                 "After you play a card, increase its damage and block for the rest of combat.");
 
