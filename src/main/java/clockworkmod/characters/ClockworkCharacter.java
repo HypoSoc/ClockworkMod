@@ -76,6 +76,8 @@ public class ClockworkCharacter extends CustomPlayer {
         retVal.add("Clockwork:Shield");
         retVal.add("Clockwork:Shield");
         retVal.add("Clockwork:WarmUp");
+        UnlockTracker.markCardAsSeen("Clockwork:Strike");
+        UnlockTracker.markCardAsSeen("Clockwork:Shield");
         return retVal;
     }
 

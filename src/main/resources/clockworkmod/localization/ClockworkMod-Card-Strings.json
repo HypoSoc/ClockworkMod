@@ -38,6 +38,12 @@
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Draw !M! cards. NL Exhaustive !stslib:ex!."
   },
 
+  "Clockwork:Pluck": {
+    "NAME": "Pluck",
+    "DESCRIPTION": "Deal !D! damage. NL Add !M! Cog to your hand. NL Exhaustive !stslib:ex!.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add !M! Cogs to your hand. NL Exhaustive !stslib:ex!."
+  },
+
   "Clockwork:Shield": {
     "NAME": "Shield",
     "DESCRIPTION": "Gain !B! Block."
