@@ -1,6 +1,7 @@
 package clockworkmod.powers;
 
 import clockworkmod.ClockworkMod;
+import clockworkmod.cards.AbstractClockworkCard;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -49,6 +50,9 @@ public class MomentumPower extends AbstractClockworkPower {
             }
             if (c.baseBlock > 0) {
                 c.baseBlock += this.amount;
+            }
+            if(c instanceof AbstractClockworkCard){
+                ((AbstractClockworkCard) c).momentumIncrementor += this.amount;
             }
         }
         if(this.left){

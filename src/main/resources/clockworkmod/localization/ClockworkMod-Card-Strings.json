@@ -26,6 +26,11 @@
     "DESCRIPTION": "Deal !D! damage. NL Add !M! Cogs to your draw pile. NL Exhaustive !stslib:ex!."
   },
 
+  "Clockwork:CraftCopperScales": {
+    "NAME": "Craft: Copper Scales",
+    "DESCRIPTION": "Ethereal. NL Gain !M! Thorns. NL Acquire Copper Scales. NL Fleeting."
+  },
+
   "Clockwork:CraftMomentumEngine": {
     "NAME": "Craft: M. Engine",
     "DESCRIPTION": "Ethereal. NL Gain !M! Momentum. NL Acquire a Momentum Engine. NL Fleeting."
@@ -37,10 +42,21 @@
     "UPGRADE_DESCRIPTION": "Draw !M! cards. NL When this card is exhausted, deal !D! damage to ALL enemies. NL Exhaustive !stslib:ex!."
   },
 
+  "Clockwork:GoldenCog": {
+    "NAME": "Golden Cog",
+    "DESCRIPTION": "Add !M! Cog to your hand. NL Obtain a Golden Cog. NL Fleeting",
+    "UPGRADE_DESCRIPTION": "Add !M! Cogs to your hand. NL Obtain a Golden Cog. NL Fleeting"
+  },
+
   "Clockwork:HelicalCog": {
     "NAME": "Helical Cog",
     "DESCRIPTION": "Gain !B! Block. NL Draw !M! card. NL Exhaustive !stslib:ex!.",
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Draw !M! cards. NL Exhaustive !stslib:ex!."
+  },
+
+  "Clockwork:PerfectedStrike": {
+    "NAME": "Perfected Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for ALL your cards containing \"Strike\"."
   },
 
   "Clockwork:Pluck": {

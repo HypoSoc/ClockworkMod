@@ -1,4 +1,23 @@
 {
+  "Clockwork:CopperScales": {
+    "NAME": "Copper Scales",
+    "FLAVOR": "A hodgepodge of metal inspired by (and stolen from) the Guardian.",
+    "DESCRIPTIONS": [
+      "At the start of combat, gain #b",
+      " Thorns."
+    ]
+  },
+
+  "Clockwork:GoldenCog": {
+    "NAME": "Golden Cog",
+    "FLAVOR": "Not very practical, but so very stylish.",
+    "DESCRIPTIONS": [
+      "At the start of combat, add #b",
+      " Cog to your hand.",
+      " Cogs to your hand."
+    ]
+  },
+
   "Clockwork:MomentumEngine": {
     "NAME": "Momentum Engine",
     "FLAVOR": "Provides the power to keep on going.",

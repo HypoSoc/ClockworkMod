@@ -6,10 +6,13 @@ import clockworkmod.cards.*;
 import clockworkmod.characters.ClockworkCharacter;
 import clockworkmod.patches.AbstractCardEnum;
 import clockworkmod.patches.ClockworkEnum;
+import clockworkmod.relics.GoldenCogRelic;
 import clockworkmod.relics.MomentumEngine;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.audio.Sfx;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.PowerStrings;
@@ -76,6 +79,9 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
     public void receiveEditRelics() {
         // Starter
         addRelicToCustomPool(new MomentumEngine(), AbstractCardEnum.CLOCKWORK);
+
+        // Special
+        addRelicToCustomPool(new GoldenCogRelic(), AbstractCardEnum.CLOCKWORK);
     }
 
     @Override
@@ -96,6 +102,8 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
         BaseMod.addCard(new ChargingShield());
 
         //Uncommon Attacks
+        BaseMod.addCard(new CraftCopperScales());
+        BaseMod.addCard(new PerfectedStrike_Clockwork());
         BaseMod.addCard(new StasisBreak());
 
         //Uncommon Skills
@@ -111,6 +119,7 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
 
         //Special
         BaseMod.addCard(new DefectiveCog());
+        BaseMod.addCard(new GoldenCog());
         BaseMod.addCard(new HelicalCog());
         BaseMod.addCard(new SpurCog());
     }
@@ -144,5 +153,28 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
 
         BaseMod.addKeyword("Stasis", new String[]{"stasis", "Stasis"},
                 "Prevent all damage that would dealt to or by you while you are in stasis.");
+    }
+
+    public static AbstractCard cog(boolean upgrade) {
+        AbstractCard cog = (new SpurCog()).makeCopy();
+        int v = AbstractDungeon.cardRandomRng.random(100);
+        // LUCKY SPIN
+        if(v == 77){
+            cog = (new GoldenCog()).makeCopy();
+        }
+        v %= 5;
+        if(v == 0 || v == 3) {
+            cog = (new SpurCog()).makeCopy();
+        }
+        else if (v == 1 || v == 4){
+            cog = (new HelicalCog()).makeCopy();
+        }
+        else if (v == 2) {
+            cog = (new DefectiveCog()).makeCopy();
+        }
+        if(upgrade){
+            cog.upgrade();
+        }
+        return cog;
     }
 }
