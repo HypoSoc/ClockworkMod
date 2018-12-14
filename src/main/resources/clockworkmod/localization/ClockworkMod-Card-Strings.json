@@ -26,6 +26,11 @@
     "DESCRIPTION": "Deal !D! damage. NL Add !M! Cogs to your draw pile. NL Exhaustive !stslib:ex!."
   },
 
+  "Clockwork:CraftMomentumEngine": {
+    "NAME": "Craft: M. Engine",
+    "DESCRIPTION": "Ethereal. NL Gain !M! Momentum. NL Acquire a Momentum Engine. NL Fleeting."
+  },
+
   "Clockwork:DefectiveCog": {
     "NAME": "Defective Cog",
     "DESCRIPTION": "Draw !M! card. NL When this card is exhausted, deal !D! damage to ALL enemies. NL Exhaustive !stslib:ex!.",

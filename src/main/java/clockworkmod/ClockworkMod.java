@@ -39,6 +39,7 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
     private static final String CHAR_BUTTON = "charSelect/button.png";
     private static final String CHAR_PORTRAIT = "charSelect/portrait.png";
 
+    public static Sfx CRAFT = new Sfx("clockworkmod/audio/craft.ogg");
     public static Sfx TICK = new Sfx("clockworkmod/audio/tick.ogg");
     public static Sfx TOCK = new Sfx("clockworkmod/audio/tock.ogg");
 
@@ -104,6 +105,7 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
         //Rare Attacks
 
         //Rare Skills
+        BaseMod.addCard(new CraftMomentumEngine());
 
         //Rare Powers
 

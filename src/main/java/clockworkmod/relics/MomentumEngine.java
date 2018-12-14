@@ -4,11 +4,10 @@ import clockworkmod.powers.MomentumPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
-public class MomentumEngine extends AbstractClockworkRelic {
+public class MomentumEngine extends AbstractStackableClockworkRelic {
     private static final String ID = getID("MomentumEngine");
     private static final RelicStrings strings = CardCrawlGame.languagePack.getRelicStrings(ID);
     private static final AbstractRelic.RelicTier TIER = AbstractRelic.RelicTier.STARTER;
@@ -17,17 +16,6 @@ public class MomentumEngine extends AbstractClockworkRelic {
 
     public MomentumEngine() {
         super(ID, IMG, TIER, SOUND);
-        setCounter(-1);
-    }
-
-    @Override
-    public void setCounter(int c)
-    {
-        super.setCounter(c);
-        description = getUpdatedDescription();
-        tips.clear();
-        tips.add(new PowerTip(name, description));
-        initializeTips();
     }
 
     @Override
