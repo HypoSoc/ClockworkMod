@@ -101,13 +101,15 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
         //Common Skills
         BaseMod.addCard(new AdaptiveShield());
         BaseMod.addCard(new ChargingShield());
+        BaseMod.addCard(new Enhance());
 
         //Uncommon Attacks
-        BaseMod.addCard(new CraftCopperScales());
+        BaseMod.addCard(new FalseStart());
         BaseMod.addCard(new PerfectedStrike_Clockwork());
         BaseMod.addCard(new StasisBreak());
 
         //Uncommon Skills
+        BaseMod.addCard(new CraftCopperScales());
 
         //Uncommon Powers
 

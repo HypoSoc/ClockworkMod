@@ -42,10 +42,21 @@
     "UPGRADE_DESCRIPTION": "Draw !M! cards. NL When this card is exhausted, deal !D! damage to ALL enemies. NL Exhaustive !stslib:ex!."
   },
 
+  "Clockwork:Enhance": {
+    "NAME": "Enhance",
+    "DESCRIPTION": "Draw a card. Increase its damage and Block by !M! for the rest of combat."
+  },
+
+  "Clockwork:FalseStart": {
+    "NAME": "False Start",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Stasis. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Deal !D! damage. NL Gain !M! Stasis. NL Exhaust."
+  },
+
   "Clockwork:GoldenCog": {
     "NAME": "Golden Cog",
-    "DESCRIPTION": "Add !M! Cog to your hand. NL Obtain a Golden Cog. NL Fleeting",
-    "UPGRADE_DESCRIPTION": "Add !M! Cogs to your hand. NL Obtain a Golden Cog. NL Fleeting"
+    "DESCRIPTION": "Add !M! Cog to your hand. NL Obtain a Golden Cog. NL Fleeting.",
+    "UPGRADE_DESCRIPTION": "Add !M! Cogs to your hand. NL Obtain a Golden Cog. NL Fleeting."
   },
 
   "Clockwork:HelicalCog": {
