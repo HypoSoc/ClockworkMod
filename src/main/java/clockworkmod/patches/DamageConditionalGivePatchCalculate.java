@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 @SpirePatch(clz = AbstractCard.class, method = "calculateCardDamage")
 public class DamageConditionalGivePatchCalculate {
     @SpireInsertPatch(
-            rlocs=38,
+            rloc=38,
             localvars={"p", "tmp"}
     )
     public static SpireReturn Insert(AbstractCard abstractCard, AbstractMonster mo,

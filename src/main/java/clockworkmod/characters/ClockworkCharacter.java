@@ -2,6 +2,7 @@ package clockworkmod.characters;
 
 import basemod.abstracts.CustomPlayer;
 import clockworkmod.ClockworkMod;
+import clockworkmod.cards.Tinker;
 import clockworkmod.patches.AbstractCardEnum;
 import clockworkmod.patches.ClockworkEnum;
 import com.badlogic.gdx.graphics.Color;
@@ -75,6 +76,7 @@ public class ClockworkCharacter extends CustomPlayer {
         retVal.add("Clockwork:Shield");
         retVal.add("Clockwork:Shield");
         retVal.add("Clockwork:Shield");
+        retVal.add("Clockwork:Tinker");
         retVal.add("Clockwork:WarmUp");
         UnlockTracker.markCardAsSeen("Clockwork:Strike");
         UnlockTracker.markCardAsSeen("Clockwork:Shield");
@@ -91,7 +93,7 @@ public class ClockworkCharacter extends CustomPlayer {
 
     @Override
     public CharSelectInfo getLoadout() {
-        return new CharSelectInfo("The Clockwork", "A curious creation, seeking to improve itself. NL Improves itself over the course of combat.",
+        return new CharSelectInfo("The Clockwork", "A curious creation, seeking to improve itself. NL Upgrades itself over the course of combat.",
                 70, 70, 0, 149,
                 5, this, getStartingRelics(), getStartingDeck(), false);
     }
@@ -113,8 +115,8 @@ public class ClockworkCharacter extends CustomPlayer {
 
     @Override
     public AbstractCard getStartCardForEvent() {
-        return null;
-    } // TODO
+        return new Tinker();
+    }
 
     @Override
     public Color getCardTrailColor() {

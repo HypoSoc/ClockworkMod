@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 @SpirePatch(clz = AbstractCard.class, method = "applyPowers")
 public class DamageConditionalGivePatchApply {
     @SpireInsertPatch(
-            rlocs=38,
+            rloc=38,
             localvars={"p", "tmp"}
     )
     public static SpireReturn Insert(AbstractCard abstractCard, AbstractPower p, @ByRef float[] tmp) {

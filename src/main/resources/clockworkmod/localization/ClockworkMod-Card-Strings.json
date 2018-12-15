@@ -86,6 +86,11 @@
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Draw !M! cards. NL Exhaustive !stslib:ex!."
   },
 
+  "Clockwork:Tinker": {
+    "NAME": "Tinker",
+    "DESCRIPTION": "Permanently increase the damage and Block of a Clockwork card by !M!. NL Exhaustive !stslib:ex!."
+  },
+
   "Clockwork:WarmUp": {
     "NAME": "Warm Up",
     "DESCRIPTION": "Innate. Cannot be played after other cards in a turn. NL Gain !M! Stasis. NL Exhaust.",

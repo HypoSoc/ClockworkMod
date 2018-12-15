@@ -2,7 +2,7 @@
   "Clockwork:Momentum": {
     "NAME": "Momentum",
     "DESCRIPTIONS": [
-      "After you play a card, increase its damage and block by #b",
+      "After you play a card, increase its damage and Block by #b",
       " for the rest of combat."
     ]
   },

@@ -63,7 +63,7 @@ public class PerfectedStrike_Clockwork extends AbstractClockworkCard {
 
     @Override
     public void applyPowers(){
-        this.baseDamage = POWER + countCards()*this.magicNumber + momentumIncrementor;
+        this.baseDamage = POWER + countCards()*this.magicNumber + momentumIncrementor + tinkerIncrementor;
         super.applyPowers();
     }
 

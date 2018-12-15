@@ -89,6 +89,7 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
         //Basic
         BaseMod.addCard(new Shield());
         BaseMod.addCard(new Strike());
+        BaseMod.addCard(new Tinker());
         BaseMod.addCard(new WarmUp());
 
         //Common Attacks
@@ -146,13 +147,13 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
                 "Cogs are 0 cost cards with minor effects that draw you cards.");
 
         BaseMod.addKeyword("Momentum", new String[]{"momentum", "Momentum"},
-                "After you play a card, increase its damage and block for the rest of combat.");
+                "After you play a card, increase its damage and Block for the rest of combat.");
 
         BaseMod.addKeyword("Rebound", new String[]{"rebound", "Rebound"},
                 "The first time you play this card each turn, put it on top your draw pile instead of in your discard pile.");
 
         BaseMod.addKeyword("Stasis", new String[]{"stasis", "Stasis"},
-                "Prevent all damage that would dealt to or by you while you are in stasis.");
+                "Prevent all damage that would dealt to or by you while you are in Stasis.");
     }
 
     public static AbstractCard cog(boolean upgrade) {
