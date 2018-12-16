@@ -1,4 +1,11 @@
 {
+  "Clockwork:AssemblyLine": {
+    "NAME": "Assembly Line",
+    "DESCRIPTIONS": [
+      "At the start of each turn, add #b",
+      " Cog to your draw pile.", " Cogs to your draw pile."
+    ]
+  },
   "Clockwork:Momentum": {
     "NAME": "Momentum",
     "DESCRIPTIONS": [

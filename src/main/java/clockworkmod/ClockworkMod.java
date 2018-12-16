@@ -114,6 +114,8 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
         BaseMod.addCard(new Selectivity());
 
         //Uncommon Powers
+        BaseMod.addCard(new AssemblyLine());
+        BaseMod.addCard(new RevUp());
 
         //Rare Attacks
 

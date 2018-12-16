@@ -41,8 +41,8 @@ public class CraftMomentumEngine extends AbstractClockworkCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
-                AbstractDungeon.player, AbstractDungeon.player,
-                new MomentumPower(AbstractDungeon.player, this.magicNumber), this.magicNumber));
+                p, p,
+                new MomentumPower(p, this.magicNumber), this.magicNumber));
         AbstractDungeon.actionManager.addToBottom(new GainRelicAction(new MomentumEngine()));
     }
 

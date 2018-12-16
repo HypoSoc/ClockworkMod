@@ -9,6 +9,12 @@
     "DESCRIPTION": "Gain !B! Block. NL Whenever you play this card, reduce its cost by !M! for this combat."
   },
 
+  "Clockwork:AssemblyLine": {
+    "NAME": "Assembly Line",
+    "DESCRIPTION": "At the start of each turn, add !M! Cog to your draw pile.",
+    "UPGRADE_DESCRIPTION": "At the start of each turn, add !M! Cogs to your draw pile."
+  },
+
   "Clockwork:ChargingBlade": {
     "NAME": "Charging Blade",
     "DESCRIPTION": "Deal !D! damage. NL Every time this card is played, increase its damage by !M! for this combat.",
@@ -79,6 +85,12 @@
   "Clockwork:RampUp": {
     "NAME": "Ramp Up",
     "DESCRIPTION": "Whenever you play a card this turn, gain !M! Strength and !M! Dexterity until the end of the turn."
+  },
+
+  "Clockwork:RevUp": {
+    "NAME": "Rev Up",
+    "DESCRIPTION": "Gain !M! Momentum.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Gain !M! Momentum."
   },
 
   "Clockwork:Selectivity": {
