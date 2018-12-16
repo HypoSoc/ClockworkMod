@@ -76,6 +76,17 @@
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add !M! Cogs to your hand. NL Exhaustive !stslib:ex!."
   },
 
+  "Clockwork:RampUp": {
+    "NAME": "Ramp Up",
+    "DESCRIPTION": "Whenever you play a card this turn, gain !M! Strength and !M! Dexterity until the end of the turn."
+  },
+
+  "Clockwork:Selectivity": {
+    "NAME": "Selectivity",
+    "DESCRIPTION": "Discard your hand. Fetch that many cards from your draw pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Discard your hand. Fetch that many cards from your draw pile. NL Exhaust."
+  },
+
   "Clockwork:Shield": {
     "NAME": "Shield",
     "DESCRIPTION": "Gain !B! Block."

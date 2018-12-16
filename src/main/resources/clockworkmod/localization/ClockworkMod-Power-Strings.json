@@ -6,6 +6,13 @@
       " for the rest of combat."
     ]
   },
+  "Clockwork:RampUp": {
+    "NAME": "Ramp Up",
+    "DESCRIPTIONS": [
+      "Whenever you play a card this turn gain #b",
+      " Strength and #b", " Dexterity until the end of the turn."
+    ]
+  },
   "Clockwork:Stasis": {
     "NAME": "Stasis",
     "DESCRIPTIONS": [
