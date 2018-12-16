@@ -26,5 +26,19 @@
       "Prevent all damage that would be dealt to or by you for #b",
       " turn.", " turns."
     ]
+  },
+  "Clockwork:UnlimitedCogworks": {
+    "NAME": "Unlimited Cogworks",
+    "DESCRIPTIONS": [
+      "If you draw #b", " more card this turn, add #b", " more cards this turn, add #b",
+      " Cog to your hand.", " Cogs to your hand."
+    ]
+  },
+  "Clockwork:UnlimitedCogworksDamage": {
+    "NAME": "Unlimited Cogworks+",
+    "DESCRIPTIONS": [
+      "If you ever have #b7 Cogs in your hand, Exhaust them all and deal #b",
+      " damage to ALL enemies."
+    ]
   }
 }

@@ -123,6 +123,7 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
         BaseMod.addCard(new CraftMomentumEngine());
 
         //Rare Powers
+        BaseMod.addCard(new UnlimitedCogworks());
 
         //Special
         BaseMod.addCard(new DefectiveCog());
@@ -165,6 +166,7 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
     public static AbstractCard cog(boolean upgrade) {
         AbstractCard cog = (new SpurCog()).makeCopy();
         int v = AbstractDungeon.cardRandomRng.random(100);
+        logger.debug("Cog: " + v);
         // LUCKY SPIN
         if(v == 77){
             cog = (new GoldenCog()).makeCopy();

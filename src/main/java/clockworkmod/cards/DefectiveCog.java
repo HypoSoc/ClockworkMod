@@ -35,6 +35,7 @@ public class DefectiveCog extends AbstractClockworkCard {
         this.baseMagicNumber = MAGIC;
         this.magicNumber = this.baseMagicNumber;
         this.tags.add(TagEnum.COG);
+        this.isMultiDamage = true;
         ExhaustiveVariable.setBaseValue(this, 3);
     }
 

@@ -125,6 +125,12 @@
     "DESCRIPTION": "Permanently increase the damage and Block of a Clockwork card by !M!. NL Exhaustive !stslib:ex!."
   },
 
+  "Clockwork:UnlimitedCogworks": {
+    "NAME": "Unlimited Cogworks",
+    "DESCRIPTION": "Whenever you draw 7 cards in a turn, add !M! Cog to your hand.",
+    "UPGRADE_DESCRIPTION": "Whenever you draw 7 cards in a turn, add !M! Cog to your hand. If you ever have 7 Cogs in your hand, deal 50 damage to ALL enemies."
+  },
+
   "Clockwork:WarmUp": {
     "NAME": "Warm Up",
     "DESCRIPTION": "Innate. Cannot be played after other cards in a turn. NL Gain !M! Stasis. NL Exhaust.",
