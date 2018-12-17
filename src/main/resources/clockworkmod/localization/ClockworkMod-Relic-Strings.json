@@ -1,4 +1,13 @@
 {
+  "Clockwork:BeatingHeart": {
+    "NAME": "Beating Heart",
+    "FLAVOR": "How can you say I'm heartless? I have one right here!",
+    "DESCRIPTIONS": [
+      "Whenever you play a card, deal #b",
+      " damage to ALL enemies."
+    ]
+  },
+
   "Clockwork:CopperScales": {
     "NAME": "Copper Scales",
     "FLAVOR": "A hodgepodge of metal inspired by (and stolen from) the Guardian.",

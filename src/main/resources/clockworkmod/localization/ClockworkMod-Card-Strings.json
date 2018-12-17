@@ -61,14 +61,19 @@
 
   "Clockwork:GoldenCog": {
     "NAME": "Golden Cog",
-    "DESCRIPTION": "Add !M! Cog to your hand. NL Obtain a Golden Cog. NL Fleeting.",
-    "UPGRADE_DESCRIPTION": "Add !M! Cogs to your hand. NL Obtain a Golden Cog. NL Fleeting."
+    "DESCRIPTION": "Add !M! Cog to your hand. NL Acquire a Golden Cog. NL Fleeting.",
+    "UPGRADE_DESCRIPTION": "Add !M! Cogs to your hand. NL Acquire a Golden Cog. NL Fleeting."
   },
 
   "Clockwork:HelicalCog": {
     "NAME": "Helical Cog",
     "DESCRIPTION": "Gain !B! Block. NL Draw !M! card. NL Exhaustive !stslib:ex!.",
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Draw !M! cards. NL Exhaustive !stslib:ex!."
+  },
+
+  "Clockwork:KaliMa": {
+    "NAME": "KALI MA",
+    "DESCRIPTION": "Deal !D! damage. NL If this kills a non-minion enemy, Acquire a Beating Heart. NL Exhaust."
   },
 
   "Clockwork:PerfectedStrike": {
@@ -107,6 +112,11 @@
   "Clockwork:StasisBreak": {
     "NAME": "Stasis Break",
     "DESCRIPTION": "Innate. NL Deal !D! damage. NL Ignores the effect of Stasis."
+  },
+
+  "Clockwork:Strangle": {
+    "NAME": "Strangle",
+    "DESCRIPTION": "Deal !D! damage. NL Whenever you draw a card this turn, the enemy loses !M! HP."
   },
 
   "Clockwork:Strike": {

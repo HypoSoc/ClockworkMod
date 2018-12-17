@@ -34,6 +34,7 @@ public class CraftMomentumEngine extends AbstractClockworkCard {
         this.baseMagicNumber = MAGIC;
         this.magicNumber = this.baseMagicNumber;
         this.tags.add(TagEnum.CRAFT);
+        this.tags.add(CardTags.HEALING);
         this.isEthereal = true;
         FleetingField.fleeting.set(this, true);
     }

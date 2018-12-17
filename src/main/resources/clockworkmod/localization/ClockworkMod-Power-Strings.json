@@ -27,6 +27,13 @@
       " turn.", " turns."
     ]
   },
+  "Clockwork:Strangled": {
+    "NAME": "Strangled",
+    "DESCRIPTIONS": [
+      "Whenever you draw a card this turn, loses #b",
+      " HP."
+    ]
+  },
   "Clockwork:UnlimitedCogworks": {
     "NAME": "Unlimited Cogworks",
     "DESCRIPTIONS": [

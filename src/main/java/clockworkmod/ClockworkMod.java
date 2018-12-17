@@ -6,17 +6,23 @@ import clockworkmod.cards.*;
 import clockworkmod.characters.ClockworkCharacter;
 import clockworkmod.patches.AbstractCardEnum;
 import clockworkmod.patches.ClockworkEnum;
+import clockworkmod.powers.OnCardDrawEnemyPower;
+import clockworkmod.relics.BeatingHeart;
+import clockworkmod.relics.CopperScales;
 import clockworkmod.relics.GoldenCogRelic;
 import clockworkmod.relics.MomentumEngine;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.audio.Sfx;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -24,7 +30,7 @@ import static basemod.BaseMod.addRelicToCustomPool;
 
 @SpireInitializer
 public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscriber,
-        EditKeywordsSubscriber, EditRelicsSubscriber, EditCardsSubscriber {
+        EditKeywordsSubscriber, EditRelicsSubscriber, EditCardsSubscriber, PostDrawSubscriber {
 
     private static final Color CLOCKWORK_COLOR = CardHelper.getColor(33.0f, 144.0f, 255.0f);
     private static final String ASSETS_FOLDER = "clockworkmod/images";
@@ -81,6 +87,8 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
         addRelicToCustomPool(new MomentumEngine(), AbstractCardEnum.CLOCKWORK);
 
         // Special
+        addRelicToCustomPool(new BeatingHeart(), AbstractCardEnum.CLOCKWORK);
+        addRelicToCustomPool(new CopperScales(), AbstractCardEnum.CLOCKWORK);
         addRelicToCustomPool(new GoldenCogRelic(), AbstractCardEnum.CLOCKWORK);
     }
 
@@ -118,6 +126,8 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
         BaseMod.addCard(new RevUp());
 
         //Rare Attacks
+        BaseMod.addCard(new KaliMa());
+        BaseMod.addCard(new Strangle());
 
         //Rare Skills
         BaseMod.addCard(new CraftMomentumEngine());
@@ -185,5 +195,17 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
             cog.upgrade();
         }
         return cog;
+    }
+
+    @Override
+    public void receivePostDraw(AbstractCard c) {
+        //custom callback for card draw on powers
+        for(AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
+            for (AbstractPower p : m.powers) {
+                if (p instanceof OnCardDrawEnemyPower) {
+                    ((OnCardDrawEnemyPower) p).onCardDraw(c);
+                }
+            }
+        }
     }
 }
