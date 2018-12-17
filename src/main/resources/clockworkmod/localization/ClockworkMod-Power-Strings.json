@@ -47,5 +47,11 @@
       "If you ever have #b7 Cogs in your hand, Exhaust them all and deal #b",
       " damage to ALL enemies."
     ]
+  },
+  "Clockwork:ZeroPointEnergy": {
+    "NAME": "Zero Point Energy",
+    "DESCRIPTIONS": [
+      "At the start of your turn, if you are in Stasis, gain", " [E]", " ."
+    ]
   }
 }

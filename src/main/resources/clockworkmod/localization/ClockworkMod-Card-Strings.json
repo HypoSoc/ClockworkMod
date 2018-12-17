@@ -130,6 +130,11 @@
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Draw !M! cards. NL Exhaustive !stslib:ex!."
   },
 
+  "Clockwork:TimeWalk": {
+    "NAME": "Time Walk",
+    "DESCRIPTION": "Discard your hand. NL Draw !M! cards. NL Gain [E] [E] [E]. NL Exhaust."
+  },
+
   "Clockwork:Tinker": {
     "NAME": "Tinker",
     "DESCRIPTION": "Permanently increase the damage and Block of a Clockwork card by !M!. NL Exhaustive !stslib:ex!."
@@ -145,6 +150,12 @@
     "NAME": "Warm Up",
     "DESCRIPTION": "Innate. Cannot be played after other cards in a turn. NL Gain !M! Stasis. NL Exhaust.",
     "EXTENDED_DESCRIPTION": ["I have already played a card this turn."]
+  },
+
+  "Clockwork:ZeroPointEnergy": {
+    "NAME": "Zero Point Energy",
+    "DESCRIPTION": "Innate. NL Gain !M! Stasis. NL At the start of each turn, if you are in Stasis, gain [E] [E] .",
+    "UPGRADE_DESCRIPTION": "Innate. NL Gain !M! Stasis. NL At the start of each turn, if you are in Stasis, gain [E] [E] [E] ."
   },
 
   "Placeholder": {

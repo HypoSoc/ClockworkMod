@@ -131,9 +131,11 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
 
         //Rare Skills
         BaseMod.addCard(new CraftMomentumEngine());
+        BaseMod.addCard(new TimeWalk());
 
         //Rare Powers
         BaseMod.addCard(new UnlimitedCogworks());
+        BaseMod.addCard(new ZeroPointEnergy());
 
         //Special
         BaseMod.addCard(new DefectiveCog());
@@ -181,18 +183,18 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
         if(v == 49){
             cog = (new GoldenCog()).makeCopy();
         }
-        v %= 5;
-        if(v == 0 || v == 3) {
-            cog = (new SpurCog()).makeCopy();
-        }
-        else if (v == 1 || v == 4){
-            cog = (new HelicalCog()).makeCopy();
-        }
-        else if (v == 2) {
-            cog = (new DefectiveCog()).makeCopy();
-        }
-        if(upgrade){
-            cog.upgrade();
+        else {
+            v %= 5;
+            if (v == 0 || v == 3) {
+                cog = (new SpurCog()).makeCopy();
+            } else if (v == 1 || v == 4) {
+                cog = (new HelicalCog()).makeCopy();
+            } else if (v == 2) {
+                cog = (new DefectiveCog()).makeCopy();
+            }
+            if (upgrade) {
+                cog.upgrade();
+            }
         }
         return cog;
     }
