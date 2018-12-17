@@ -175,10 +175,10 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
 
     public static AbstractCard cog(boolean upgrade) {
         AbstractCard cog = (new SpurCog()).makeCopy();
-        int v = AbstractDungeon.cardRandomRng.random(100);
+        int v = AbstractDungeon.cardRandomRng.random(50);
         logger.debug("Cog: " + v);
         // LUCKY SPIN
-        if(v == 77){
+        if(v == 49){
             cog = (new GoldenCog()).makeCopy();
         }
         v %= 5;
