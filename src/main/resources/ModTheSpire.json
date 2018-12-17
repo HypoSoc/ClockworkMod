@@ -3,7 +3,7 @@
   "name": "Clockwork Mod",
   "author_list": ["HypoSoc"],
   "description": "Adds a new character: The Clockwork.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "sts_version": "11-15-2018",
   "mts_version": "3.6.3",
   "dependencies": ["basemod", "stslib"],

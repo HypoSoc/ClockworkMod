@@ -58,12 +58,14 @@ public class MomentumPower extends AbstractClockworkPower {
         if(this.left){
             this.left = false;
             this.img = IMG2;
-            ClockworkMod.TICK.play(Settings.SOUND_VOLUME * Settings.MASTER_VOLUME * 120);
+            if(ClockworkMod.tick_tock)
+                ClockworkMod.TICK.play(Settings.SOUND_VOLUME * Settings.MASTER_VOLUME * 120);
         }
         else {
             this.left = true;
             this.img = IMG;
-            ClockworkMod.TOCK.play(Settings.SOUND_VOLUME * Settings.MASTER_VOLUME * 120);
+            if(ClockworkMod.tick_tock)
+                ClockworkMod.TOCK.play(Settings.SOUND_VOLUME * Settings.MASTER_VOLUME * 120);
         }
     }
 }

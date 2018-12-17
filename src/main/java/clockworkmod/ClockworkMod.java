@@ -1,6 +1,8 @@
 package clockworkmod;
 
 import basemod.BaseMod;
+import basemod.ModLabeledToggleButton;
+import basemod.ModPanel;
 import basemod.interfaces.*;
 import clockworkmod.cards.*;
 import clockworkmod.characters.ClockworkCharacter;
@@ -11,13 +13,17 @@ import clockworkmod.relics.BeatingHeart;
 import clockworkmod.relics.CopperScales;
 import clockworkmod.relics.GoldenCogRelic;
 import clockworkmod.relics.MomentumEngine;
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
+import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.audio.Sfx;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
+import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
@@ -26,11 +32,14 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.Properties;
+
 import static basemod.BaseMod.addRelicToCustomPool;
 
 @SpireInitializer
 public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscriber,
-        EditKeywordsSubscriber, EditRelicsSubscriber, EditCardsSubscriber, PostDrawSubscriber {
+        EditKeywordsSubscriber, EditRelicsSubscriber, EditCardsSubscriber, PostDrawSubscriber,
+        PostInitializeSubscriber {
 
     private static final Color CLOCKWORK_COLOR = CardHelper.getColor(33.0f, 144.0f, 255.0f);
     private static final String ASSETS_FOLDER = "clockworkmod/images";
@@ -52,6 +61,10 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
     public static Sfx TICK = new Sfx("clockworkmod/audio/tick.ogg");
     public static Sfx TOCK = new Sfx("clockworkmod/audio/tock.ogg");
 
+    public static boolean tick_tock = true;
+    public static final String PROP_TICK_TOCK = "tick_tock";
+    public static Properties clockworkDefaults = new Properties();
+
     public static String getResourcePath(String resource) {
         return ASSETS_FOLDER + "/" + resource;
     }
@@ -67,6 +80,9 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
                 getResourcePath(ENERGY_ORB), getResourcePath(ATTACK_CARD_PORTRAIT),
                 getResourcePath(SKILL_CARD_PORTRAIT), getResourcePath(POWER_CARD_PORTRAIT),
                 getResourcePath(ENERGY_ORB_PORTRAIT));
+
+        clockworkDefaults.setProperty(PROP_TICK_TOCK, "TRUE");
+        loadConfigData();
     }
 
     public static void initialize() {
@@ -208,6 +224,44 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
                     ((OnCardDrawEnemyPower) p).onCardDraw(c);
                 }
             }
+        }
+    }
+
+    @Override
+    public void receivePostInitialize() {
+        Texture badgeTexture = new Texture(Gdx.files.internal("clockworkmod/images/badge.png"));
+
+        ModPanel settingsPanel = new ModPanel();
+        ModLabeledToggleButton tickTockBtn = new ModLabeledToggleButton("Enable Clock Ticking Sound Effect",
+                350.0f, 700.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                tick_tock, settingsPanel, (label) -> {}, (button) -> {
+            tick_tock = button.enabled;
+            saveData();
+        });
+        settingsPanel.addUIElement(tickTockBtn);
+        BaseMod.registerModBadge(badgeTexture,
+                "ClockworkMod", "HypoSoc", "New Character: The Clockwork", settingsPanel);
+    }
+
+    public static void saveData() {
+        try {
+            SpireConfig config = new SpireConfig("ClockworkMod", "ClockworkSaveData", clockworkDefaults);
+            config.setBool(PROP_TICK_TOCK, tick_tock);
+            config.save();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void loadConfigData() {
+        try {
+            logger.info("ClockworkMod | Loading Config Preferences...");
+            SpireConfig config = new SpireConfig("ClockworkMod", "ClockworkSaveData", clockworkDefaults);
+            config.load();
+            tick_tock = config.getBool(PROP_TICK_TOCK);
+        }
+        catch(Exception e) {
+            e.printStackTrace();
         }
     }
 }

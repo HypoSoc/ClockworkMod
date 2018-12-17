@@ -1,4 +1,8 @@
-@ Version 0.0.1
+# Version 0.0.2
+
+You can now turn off the Tick Tock sound effect from the config menu (but why would you?)
+
+# Version 0.0.1
 
 Initial release. Game is now at a point where it doesn't crash any more, and many of the core mechanics are implemented.
 

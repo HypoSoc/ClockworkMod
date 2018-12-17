@@ -154,8 +154,8 @@
 
   "Clockwork:ZeroPointEnergy": {
     "NAME": "Zero Point Energy",
-    "DESCRIPTION": "Innate. NL Gain !M! Stasis. NL At the start of each turn, if you are in Stasis, gain [E] [E] .",
-    "UPGRADE_DESCRIPTION": "Innate. NL Gain !M! Stasis. NL At the start of each turn, if you are in Stasis, gain [E] [E] [E] ."
+    "DESCRIPTION": "Innate. NL Gain !M! Stasis. NL At the start of each turn, if you are in Stasis, gain [E] [E]",
+    "UPGRADE_DESCRIPTION": "Innate. NL Gain !M! Stasis. NL At the start of each turn, if you are in Stasis, gain [E] [E] [E]"
   },
 
   "Placeholder": {
