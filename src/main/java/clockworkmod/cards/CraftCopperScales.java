@@ -25,7 +25,7 @@ public class CraftCopperScales extends AbstractClockworkCard {
 
     private static final int COST = 3;
     private static final int MAGIC = 3;
-    private static final int UPGRADE_COST = 0;
+    private static final int UPGRADE_COST = 1;
 
     public CraftCopperScales()
     {

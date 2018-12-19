@@ -24,7 +24,7 @@
   "Clockwork:ChargingShield": {
     "NAME": "Charging Shield",
     "DESCRIPTION": "Gain !B! Block. NL Every time this card is played, increase its Block by !M! for this combat.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Black. NL Every time this card is played, increase its Block by !M! for this combat. NL Rebound."
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Every time this card is played, increase its Block by !M! for this combat. NL Rebound."
   },
 
   "Clockwork:CogToss": {
@@ -55,8 +55,18 @@
 
   "Clockwork:FalseStart": {
     "NAME": "False Start",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Stasis. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Deal !D! damage. NL Gain !M! Stasis. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL If it is your first turn, gain !M! Stasis.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Deal !D! damage. NL If it is your first turn, gain !M! Stasis."
+  },
+
+  "Clockwork:ForgeStrike": {
+    "NAME": "Forge Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Upgrade a card in your hand for the rest of combat."
+  },
+
+  "Clockwork:Friction": {
+    "NAME": "Friction",
+    "DESCRIPTION": "Deal !D! damage. NL Add a Burn to your discard pile."
   },
 
   "Clockwork:GoldenCog": {
@@ -109,6 +119,11 @@
     "DESCRIPTION": "Gain !B! Block."
   },
 
+  "Clockwork:SnapKeep": {
+    "NAME": "Snap Keep",
+    "DESCRIPTION": "Deal !D! damage. NL Fetch a card from your discard pile."
+  },
+
   "Clockwork:StasisBreak": {
     "NAME": "Stasis Break",
     "DESCRIPTION": "Innate. NL Deal !D! damage. NL Ignores the effect of Stasis."
@@ -143,7 +158,7 @@
   "Clockwork:UnlimitedCogworks": {
     "NAME": "Unlimited Cogworks",
     "DESCRIPTION": "Whenever you draw 7 cards in a turn, add !M! Cog to your hand.",
-    "UPGRADE_DESCRIPTION": "Whenever you draw 7 cards in a turn, add !M! Cog to your hand. If you ever have 7 Cogs in your hand, deal 50 damage to ALL enemies."
+    "UPGRADE_DESCRIPTION": "Whenever you draw 7 cards in a turn, add !M! Cog to your hand. If you ever have 7 Cogs in your hand, Exhuast them all and deal 50 damage to ALL enemies."
   },
 
   "Clockwork:WarmUp": {

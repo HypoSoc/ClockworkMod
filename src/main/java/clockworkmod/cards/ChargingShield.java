@@ -20,7 +20,7 @@ public class ChargingShield extends AbstractClockworkCard {
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
 
-    private static final int COST = 0;
+    private static final int COST = 1;
     private static final int BLOCK = 2;
     private static final int MAGIC = 1;
 

@@ -25,7 +25,7 @@ public class CraftMomentumEngine extends AbstractClockworkCard {
 
     private static final int COST = 3;
     private static final int MAGIC = 1;
-    private static final int UPGRADE_COST = 0;
+    private static final int UPGRADE_COST = 1;
 
     public CraftMomentumEngine()
     {

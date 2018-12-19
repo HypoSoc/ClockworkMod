@@ -120,7 +120,10 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
         BaseMod.addCard(new AdaptiveCannon());
         BaseMod.addCard(new ChargingBlade());
         BaseMod.addCard(new CogToss());
+        BaseMod.addCard(new ForgeStrike());
+        BaseMod.addCard(new Friction());
         BaseMod.addCard(new Pluck());
+        BaseMod.addCard(new SnapKeep());
 
         //Common Skills
         BaseMod.addCard(new AdaptiveShield());
