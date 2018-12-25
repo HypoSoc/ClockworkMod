@@ -86,6 +86,11 @@
     "DESCRIPTION": "Deal !D! damage. NL If this kills a non-minion enemy, Acquire a Beating Heart. NL Exhaust."
   },
 
+  "Clockwork:Minimalism": {
+    "NAME": "Minimalism",
+    "DESCRIPTION": "Exhaust the top !M! cards of your draw pile. NL Exhaust."
+  },
+
   "Clockwork:PerfectedStrike": {
     "NAME": "Perfected Strike",
     "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for ALL your cards containing \"Strike\"."
