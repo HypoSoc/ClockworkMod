@@ -130,6 +130,8 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
         //Common Skills
         BaseMod.addCard(new AdaptiveShield());
         BaseMod.addCard(new ChargingShield());
+        BaseMod.addCard(new CogBarrier());
+        BaseMod.addCard(new CogShield());
         BaseMod.addCard(new Enhance());
         BaseMod.addCard(new Minimalism());
 
