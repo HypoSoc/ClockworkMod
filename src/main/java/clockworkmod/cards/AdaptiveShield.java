@@ -21,9 +21,9 @@ public class AdaptiveShield extends AbstractClockworkCard {
     private static final CardTarget TARGET = CardTarget.SELF;
 
     private static final int COST = 3;
-    private static final int BLOCK = 20;
+    private static final int BLOCK = 16;
     private static final int MAGIC = 1;
-    private static final int UPGRADE = 5;
+    private static final int UPGRADE = 4;
 
     public AdaptiveShield()
     {

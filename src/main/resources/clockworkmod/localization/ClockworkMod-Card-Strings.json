@@ -102,10 +102,21 @@
     "DESCRIPTION": "Whenever you play a card this turn, gain !M! Strength and !M! Dexterity until the end of the turn."
   },
 
+  "Clockwork:Redundancy": {
+    "NAME": "Redundancy",
+    "DESCRIPTION": "Deal !D! damage. NL Costs [E] less energy for every !M! cards in your deck at the start of the turn."
+  },
+
   "Clockwork:RevUp": {
     "NAME": "Rev Up",
     "DESCRIPTION": "Gain !M! Momentum.",
     "UPGRADE_DESCRIPTION": "Innate. NL Gain !M! Momentum."
+  },
+
+  "Clockwork:Roundhouse": {
+    "NAME": "Roundhouse",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL Draw !M! cards."
   },
 
   "Clockwork:Selectivity": {
@@ -126,7 +137,7 @@
 
   "Clockwork:StasisBreak": {
     "NAME": "Stasis Break",
-    "DESCRIPTION": "Innate. NL Deal !D! damage. NL Ignores the effect of Stasis."
+    "DESCRIPTION": "Innate. NL Deal !D! damage. NL Ignores the effects of Stasis."
   },
 
   "Clockwork:Strangle": {
