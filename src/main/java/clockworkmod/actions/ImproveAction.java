@@ -1,19 +1,22 @@
 package clockworkmod.actions;
 
-import clockworkmod.cards.AbstractClockworkCard;
+import clockworkmod.ClockworkMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.GetAllInBattleInstances;
 
-public class EnhanceAction extends AbstractGameAction{
+public class ImproveAction extends AbstractGameAction{
 
-    private int enhanceAmount;
+    private int costReduction;
 
-    public EnhanceAction(int enhanceAmount){
+    public ImproveAction() {
+        this(0);
+    }
+    public ImproveAction(int costReduction){
         this.duration = 0.0F;
         this.actionType = AbstractGameAction.ActionType.WAIT;
-        this.enhanceAmount = enhanceAmount;
+        this.costReduction = costReduction;
     }
 
     @Override
@@ -24,20 +27,14 @@ public class EnhanceAction extends AbstractGameAction{
             return;
         }
         AbstractCard baseCard = AbstractDungeon.player.drawPile.getTopCard();
+
         for (AbstractCard c : GetAllInBattleInstances.get(baseCard.uuid)) {
-            if (c.type != AbstractCard.CardType.STATUS
-                    && c.type != AbstractCard.CardType.CURSE) {
-                if (c.baseDamage > 0) {
-                    c.baseDamage += this.enhanceAmount;
-                }
-                if (c.baseBlock > 0) {
-                    c.baseBlock += this.enhanceAmount;
-                }
-                if (c instanceof AbstractClockworkCard) {
-                    ((AbstractClockworkCard) c).momentumIncrementor += this.enhanceAmount;
-                }
+            if(c.upgraded) {
+                c.modifyCostForCombat(-costReduction);
             }
+            c.upgrade();
         }
+
         this.isDone = true;
     }
 }

@@ -63,6 +63,18 @@ public class Redundancy extends AbstractClockworkCard {
         }
     }
 
+    public void applyPowers() {
+        if(!this.isCostModified && !this.isCostModifiedForTurn) {
+            int current = this.cost;
+            int deckSize = AbstractDungeon.player.drawPile.size()
+                    + AbstractDungeon.player.discardPile.size()
+                    + AbstractDungeon.player.hand.size();
+            int desired = COST - (deckSize / this.magicNumber);
+            this.updateCostAlt(desired - current);
+        }
+        super.applyPowers();
+    }
+
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage,

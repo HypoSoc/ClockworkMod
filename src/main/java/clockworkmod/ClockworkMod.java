@@ -133,7 +133,9 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
         BaseMod.addCard(new CogBarrier());
         BaseMod.addCard(new CogShield());
         BaseMod.addCard(new Enhance());
+        BaseMod.addCard(new Improve());
         BaseMod.addCard(new Minimalism());
+        BaseMod.addCard(new ReserveSystems());
 
         //Uncommon Attacks
         BaseMod.addCard(new FalseStart());

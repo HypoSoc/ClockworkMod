@@ -11,8 +11,8 @@
 
   "Clockwork:AssemblyLine": {
     "NAME": "Assembly Line",
-    "DESCRIPTION": "At the start of each turn, add !M! Cog to your draw pile.",
-    "UPGRADE_DESCRIPTION": "At the start of each turn, add !M! Cogs to your draw pile."
+    "DESCRIPTION": "At the start of each turn, shuffle !M! Cog into your draw pile.",
+    "UPGRADE_DESCRIPTION": "At the start of each turn, shuffle !M! Cogs into your draw pile."
   },
 
   "Clockwork:ChargingBlade": {
@@ -34,12 +34,12 @@
 
   "Clockwork:CogShield": {
     "NAME": "Cog Shield",
-    "DESCRIPTION": "Gain !B! Block. NL Add !M! Cog to your draw pile."
+    "DESCRIPTION": "Gain !B! Block. NL Shuffle !M! Cog into your draw pile."
   },
 
   "Clockwork:CogToss": {
     "NAME": "Cog Toss",
-    "DESCRIPTION": "Deal !D! damage. NL Add !M! Cogs to your draw pile. NL Exhaustive !stslib:ex!."
+    "DESCRIPTION": "Deal !D! damage. NL Shuffle !M! Cogs to your draw pile. NL Exhaustive !stslib:ex!."
   },
 
   "Clockwork:CraftCopperScales": {
@@ -91,6 +91,12 @@
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Draw !M! cards. NL Exhaustive !stslib:ex!."
   },
 
+  "Clockwork:Improve": {
+    "NAME": "Improve",
+    "DESCRIPTION": "Draw a card and Upgrade it for the rest of combat.",
+    "UPGRADE_DESCRIPTION": "Draw a card and Upgrade it for the rest of combat. NL If it is already upgraded, reduce its cost by !M! for the rest of combat."
+  },
+
   "Clockwork:KaliMa": {
     "NAME": "KALI MA",
     "DESCRIPTION": "Deal !D! damage. NL If this kills a non-minion enemy, Acquire a Beating Heart. NL Exhaust."
@@ -119,7 +125,13 @@
 
   "Clockwork:Redundancy": {
     "NAME": "Redundancy",
-    "DESCRIPTION": "Deal !D! damage. NL Costs [E] less energy for every !M! cards in your deck at the start of the turn."
+    "DESCRIPTION": "Deal !D! damage. NL Costs [E] less energy for every !M! cards in your deck."
+  },
+
+  "Clockwork:ReserveSystems": {
+    "NAME": "Reserve Systems",
+    "DESCRIPTION": "Gain !B! Block. NL Add a Burn to your hand.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Add a Burn to your discard pile."
   },
 
   "Clockwork:RevUp": {
@@ -184,7 +196,7 @@
   "Clockwork:UnlimitedCogworks": {
     "NAME": "Unlimited Cogworks",
     "DESCRIPTION": "Whenever you draw 7 cards in a turn, add !M! Cog to your hand.",
-    "UPGRADE_DESCRIPTION": "Whenever you draw 7 cards in a turn, add !M! Cog to your hand. If you ever have 7 Cogs in your hand, Exhuast them all and deal 50 damage to ALL enemies."
+    "UPGRADE_DESCRIPTION": "Whenever you draw 7 cards in a turn, add !M! Cog to your hand. If you ever have 7 Cogs in your hand, Exhaust them all and deal 50 damage to ALL enemies."
   },
 
   "Clockwork:WarmUp": {
