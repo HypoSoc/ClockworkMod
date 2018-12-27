@@ -1,3 +1,11 @@
+# Version 0.0.3
+
+Balance Tweaks
+
+All Common Cards are now Implemented
+
+41/81 Cards completed.
+
 # Version 0.0.2
 
 You can now turn off the Tick Tock sound effect from the config menu (but why would you?)
