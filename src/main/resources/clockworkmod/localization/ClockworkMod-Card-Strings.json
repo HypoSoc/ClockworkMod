@@ -183,6 +183,18 @@
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Draw !M! cards. NL Exhaustive !stslib:ex!."
   },
 
+  "Clockwork:SystemHardening": {
+    "NAME": "System Hardening",
+    "DESCRIPTION": "Whenever you draw a card this turn, gain !M! Block.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Whenever you draw a card this turn, gain !M! Block."
+  },
+
+  "Clockwork:SystemScan": {
+    "NAME": "System Scan",
+    "DESCRIPTION": "Draw 1 card for every !M! cards in your deck. NL Discard 1 card.",
+    "UPGRADE_DESCRIPTION": "Draw 1 card for every !M! cards in your deck."
+  },
+
   "Clockwork:TimeWalk": {
     "NAME": "Time Walk",
     "DESCRIPTION": "Discard your hand. NL Draw !M! cards. NL Gain [E] [E] [E]. NL Exhaust."

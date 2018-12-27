@@ -34,6 +34,13 @@
       " HP."
     ]
   },
+  "Clockwork:SystemHardening": {
+    "NAME": "System Hardening",
+    "DESCRIPTIONS": [
+      "Whenever you draw a card this turn, gain #b",
+      " Block."
+    ]
+  },
   "Clockwork:UnlimitedCogworks": {
     "NAME": "Unlimited Cogworks",
     "DESCRIPTIONS": [

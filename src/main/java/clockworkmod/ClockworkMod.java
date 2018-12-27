@@ -136,6 +136,8 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
         BaseMod.addCard(new Improve());
         BaseMod.addCard(new Minimalism());
         BaseMod.addCard(new ReserveSystems());
+        BaseMod.addCard(new SystemHardening());
+        BaseMod.addCard(new SystemScan());
 
         //Uncommon Attacks
         BaseMod.addCard(new FalseStart());
@@ -203,10 +205,10 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
 
     public static AbstractCard cog(boolean upgrade) {
         AbstractCard cog = (new SpurCog()).makeCopy();
-        int v = AbstractDungeon.cardRandomRng.random(50);
+        int v = AbstractDungeon.cardRandomRng.random(100);
         logger.debug("Cog: " + v);
         // LUCKY SPIN
-        if(v == 49){
+        if(v == 77){
             cog = (new GoldenCog()).makeCopy();
         }
         else {
