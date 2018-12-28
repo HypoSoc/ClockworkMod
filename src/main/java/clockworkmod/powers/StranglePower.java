@@ -38,7 +38,6 @@ public class StranglePower extends AbstractClockworkPower implements OnCardDrawE
 
     @Override
     public void onCardDraw(AbstractCard abstractCard) {
-        ClockworkMod.logger.debug("Strangle: " + this.amount);
         flash();
         AbstractDungeon.actionManager.addToBottom(new LoseHPAction(this.owner, null, this.amount));
     }

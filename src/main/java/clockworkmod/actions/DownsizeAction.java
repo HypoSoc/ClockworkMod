@@ -1,62 +1,73 @@
 package clockworkmod.actions;
 
-import clockworkmod.cards.AbstractClockworkCard;
+import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.FleetingField;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.GetAllInBattleInstances;
 
 import java.util.ArrayList;
 
-public class TinkerAction extends AbstractGameAction {
+public class DownsizeAction extends AbstractGameAction {
     private AbstractPlayer p;
     private static String[] TEXT = {"Improve."};
-    private ArrayList<AbstractCard> untinkerableCards = new ArrayList<>();
-    private int amount;
+    private ArrayList<AbstractCard> unpurgableCards = new ArrayList<>();
 
-    public TinkerAction(AbstractPlayer p){
-        this(p, 1);
-    }
+    private boolean isUpgraded;
 
-    public TinkerAction(AbstractPlayer p, int amount){
+    public DownsizeAction(AbstractPlayer p, boolean isUpgraded){
         this.p = p;
         this.actionType = ActionType.CARD_MANIPULATION;
         this.duration = Settings.ACTION_DUR_FAST;
-        this.amount = amount;
+        this.isUpgraded = isUpgraded;
     }
 
-    private boolean isTinkerable(AbstractCard c){
-        if(c instanceof AbstractClockworkCard){
-            if(c.baseBlock >= 0 || c.baseDamage >= 0){
-                return true;
+    private boolean isPurgable(AbstractCard c){
+        return (c.type != AbstractCard.CardType.CURSE);
+    }
+
+    private void act(AbstractCard card){
+        if(this.isUpgraded){
+            for (AbstractCard c : GetAllInBattleInstances.get(card.uuid)){
+                FleetingField.fleeting.set(c, true);
+                if(c.costForTurn > 0) {
+                    c.costForTurn = 0;
+                    c.isCostModifiedForTurn = true;
+                    c.cost = 0;
+                    c.isCostModified = true;
+                    c.name = "Fleeting: " + c.name;
+                }
             }
         }
-        return false;
+        else {
+            AbstractDungeon.actionManager.addToBottom(
+                    new PurgeAction(card));
+        }
     }
 
     public void update() {
         if(this.duration == Settings.ACTION_DUR_FAST) {
             for (AbstractCard c : this.p.hand.group) {
-                if (!isTinkerable(c)) {
-                    this.untinkerableCards.add(c);
+                if (!isPurgable(c)) {
+                    this.unpurgableCards.add(c);
                 }
             }
-            if (this.p.hand.size() == this.untinkerableCards.size()) {
+            if (this.p.hand.size() == this.unpurgableCards.size()) {
                 this.isDone = true;
                 return;
             }
-            if (this.p.hand.size() - this.untinkerableCards.size() == 1) {
+            if (this.p.hand.size() - this.unpurgableCards.size() == 1) {
                 for (AbstractCard c : this.p.hand.group) {
-                    if (isTinkerable(c)) {
-                        AbstractDungeon.actionManager.addToBottom(
-                                new IncreaseTinkerAction((AbstractClockworkCard)c, this.amount));
+                    if (isPurgable(c)) {
+                        act(c);
                         this.isDone = true;
                         return;
                     }
                 }
             }
-            this.p.hand.group.removeAll(this.untinkerableCards);
+            this.p.hand.group.removeAll(this.unpurgableCards);
             if (this.p.hand.group.size() > 1)
             {
                 AbstractDungeon.handCardSelectScreen.open(
@@ -66,8 +77,7 @@ public class TinkerAction extends AbstractGameAction {
             }
             if (this.p.hand.group.size() == 1)
             {
-                AbstractDungeon.actionManager.addToBottom(
-                        new IncreaseTinkerAction((AbstractClockworkCard)(this.p.hand.getTopCard()), this.amount));
+                act(this.p.hand.getTopCard());
                 returnCards();
                 this.isDone = true;
             }
@@ -76,9 +86,8 @@ public class TinkerAction extends AbstractGameAction {
         {
             returnCards();
             for (AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group) {
-                AbstractDungeon.actionManager.addToBottom(
-                        new IncreaseTinkerAction((AbstractClockworkCard)c, this.amount));
                 p.hand.addToTop(c);
+                act(c);
             }
             AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;
             AbstractDungeon.handCardSelectScreen.selectedCards.group.clear();
@@ -88,7 +97,7 @@ public class TinkerAction extends AbstractGameAction {
     }
 
     private void returnCards() {
-        for (AbstractCard c : this.untinkerableCards) {
+        for (AbstractCard c : this.unpurgableCards) {
             this.p.hand.addToTop(c);
         }
         this.p.hand.refreshHandLayout();

@@ -58,6 +58,12 @@
     "UPGRADE_DESCRIPTION": "Draw !M! cards. NL When this card is exhausted, deal !D! damage to ALL enemies. NL Exhaustive !stslib:ex!."
   },
 
+  "Clockwork:Downsize": {
+    "NAME": "Downsize",
+    "DESCRIPTION": "Permanently remove a non-Curse card from your deck. NL Depleting !clock:dep!",
+    "UPGRADE_DESCRIPTION": "Give a non-curse card Fleeting. It costs 0. NL Depleting !clock:dep!"
+  },
+
   "Clockwork:Enhance": {
     "NAME": "Enhance",
     "DESCRIPTION": "Draw a card. Increase its damage and Block by !M! for the rest of combat."

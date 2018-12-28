@@ -6,6 +6,7 @@ import basemod.ModPanel;
 import basemod.interfaces.*;
 import clockworkmod.cards.*;
 import clockworkmod.characters.ClockworkCharacter;
+import clockworkmod.fields.DepletingSave;
 import clockworkmod.patches.AbstractCardEnum;
 import clockworkmod.patches.ClockworkEnum;
 import clockworkmod.powers.OnCardDrawEnemyPower;
@@ -13,6 +14,7 @@ import clockworkmod.relics.BeatingHeart;
 import clockworkmod.relics.CopperScales;
 import clockworkmod.relics.GoldenCogRelic;
 import clockworkmod.relics.MomentumEngine;
+import clockworkmod.variables.DepletingVariable;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -74,6 +76,8 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
     public ClockworkMod() {
         BaseMod.subscribe(this);
 
+        BaseMod.addSaveField("depletion", new DepletingSave());
+
         BaseMod.addColor(AbstractCardEnum.CLOCKWORK,
                 CLOCKWORK_COLOR, CLOCKWORK_COLOR, CLOCKWORK_COLOR, CLOCKWORK_COLOR, CLOCKWORK_COLOR, CLOCKWORK_COLOR, CLOCKWORK_COLOR,
                 getResourcePath(ATTACK_CARD), getResourcePath(SKILL_CARD), getResourcePath(POWER_CARD),
@@ -110,6 +114,9 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
 
     @Override
     public void receiveEditCards() {
+        //DynamicVariable
+        BaseMod.addDynamicVariable(new DepletingVariable());
+
         //Basic
         BaseMod.addCard(new Shield());
         BaseMod.addCard(new Strike());
@@ -146,6 +153,7 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
 
         //Uncommon Skills
         BaseMod.addCard(new CraftCopperScales());
+        BaseMod.addCard(new Downsize());
         BaseMod.addCard(new RampUp());
         BaseMod.addCard(new Selectivity());
 
@@ -190,17 +198,20 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
 
     @Override
     public void receiveEditKeywords() {
-        BaseMod.addKeyword(new String[]{"cog", "Cog", "cogs", "Cogs"},
+        BaseMod.addKeyword(new String[]{"cog", "cogs"},
                 "Cogs are 0 cost cards with minor effects that draw you cards.");
 
-        BaseMod.addKeyword("Momentum", new String[]{"momentum", "Momentum"},
+        BaseMod.addKeyword("Momentum", new String[]{"momentum"},
                 "After you play a card, increase its damage and Block for the rest of combat.");
 
-        BaseMod.addKeyword("Rebound", new String[]{"rebound", "Rebound"},
+        BaseMod.addKeyword("Rebound", new String[]{"rebound"},
                 "The first time you play this card each turn, put it on top your draw pile instead of in your discard pile.");
 
-        BaseMod.addKeyword("Stasis", new String[]{"stasis", "Stasis"},
+        BaseMod.addKeyword("Stasis", new String[]{"stasis"},
                 "Prevent all damage that would dealt to or by you while you are in Stasis.");
+
+        BaseMod.addKeyword(new String[]{"depleting"},
+                "Permanently removes itself from your deck after a certain number of uses.");
     }
 
     public static AbstractCard cog(boolean upgrade) {
