@@ -163,9 +163,20 @@
     "DESCRIPTION": "Gain !B! Block."
   },
 
+  "Clockwork:SmithsMallet": {
+    "NAME": "Smith's Mallet",
+    "DESCRIPTION": "Deal !D! damage. NL Permanently Upgrade a card in your hand. NL Depleting !clock:dep!"
+  },
+
   "Clockwork:SnapKeep": {
     "NAME": "Snap Keep",
     "DESCRIPTION": "Deal !D! damage. NL Fetch a card from your discard pile."
+  },
+
+  "Clockwork:SpurCog": {
+    "NAME": "Spur Cog",
+    "DESCRIPTION": "Deal !D! damage. NL Draw !M! card. NL Exhaustive !stslib:ex!.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Draw !M! cards. NL Exhaustive !stslib:ex!."
   },
 
   "Clockwork:StasisBreak": {
@@ -181,12 +192,6 @@
   "Clockwork:Strike": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage."
-  },
-
-  "Clockwork:SpurCog": {
-    "NAME": "Spur Cog",
-    "DESCRIPTION": "Deal !D! damage. NL Draw !M! card. NL Exhaustive !stslib:ex!.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Draw !M! cards. NL Exhaustive !stslib:ex!."
   },
 
   "Clockwork:SystemHardening": {

@@ -9,11 +9,11 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 
 @SpirePatch(
         clz= AbstractCard.class,
-        method="makeSameInstanceOf"
+        method="makeStatEquivalentCopy"
 )
 public class DepletingPersistancePatch {
     @SpireInsertPatch(
-            rloc=2,
+            rloc=1,
             localvars = {"card"}
     )
     public static SpireReturn Insert(AbstractCard abstractCard, AbstractCard card) {

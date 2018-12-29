@@ -18,10 +18,12 @@ public class SelectivityAction extends AbstractGameAction
         if (this.duration == Settings.ACTION_DUR_FAST)
         {
             int theSize = AbstractDungeon.player.hand.size();
-            AbstractDungeon.actionManager.addToBottom(
-                    new DiscardAction(AbstractDungeon.player, AbstractDungeon.player, theSize, false));
-            AbstractDungeon.actionManager.addToBottom(
-                    new FetchAction(AbstractDungeon.player.drawPile, theSize));
+            if(theSize > 0) {
+                AbstractDungeon.actionManager.addToBottom(
+                        new DiscardAction(AbstractDungeon.player, AbstractDungeon.player, theSize, false));
+                AbstractDungeon.actionManager.addToBottom(
+                        new FetchAction(AbstractDungeon.player.drawPile, theSize));
+            }
         }
         tickDuration();
     }
