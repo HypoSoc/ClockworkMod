@@ -10,9 +10,9 @@ public class IncreaseTinkerAction
         extends AbstractGameAction
 {
     private int tinkerIncrease;
-    private AbstractClockworkCard card;
+    private AbstractCard card;
 
-    public IncreaseTinkerAction(AbstractClockworkCard card, int tinkerIncrease)
+    public IncreaseTinkerAction(AbstractCard card, int tinkerIncrease)
     {
         this.tinkerIncrease = tinkerIncrease;
 

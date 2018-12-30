@@ -50,7 +50,7 @@ public class TinkerAction extends AbstractGameAction {
                 for (AbstractCard c : this.p.hand.group) {
                     if (isTinkerable(c)) {
                         AbstractDungeon.actionManager.addToBottom(
-                                new IncreaseTinkerAction((AbstractClockworkCard)c, this.amount));
+                                new IncreaseTinkerAction(c, this.amount));
                         this.isDone = true;
                         return;
                     }
@@ -67,7 +67,7 @@ public class TinkerAction extends AbstractGameAction {
             if (this.p.hand.group.size() == 1)
             {
                 AbstractDungeon.actionManager.addToBottom(
-                        new IncreaseTinkerAction((AbstractClockworkCard)(this.p.hand.getTopCard()), this.amount));
+                        new IncreaseTinkerAction(this.p.hand.getTopCard(), this.amount));
                 returnCards();
                 this.isDone = true;
             }
@@ -77,7 +77,7 @@ public class TinkerAction extends AbstractGameAction {
             returnCards();
             for (AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group) {
                 AbstractDungeon.actionManager.addToBottom(
-                        new IncreaseTinkerAction((AbstractClockworkCard)c, this.amount));
+                        new IncreaseTinkerAction(c, this.amount));
                 p.hand.addToTop(c);
             }
             AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;

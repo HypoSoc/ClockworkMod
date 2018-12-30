@@ -146,6 +146,11 @@
     "UPGRADE_DESCRIPTION": "Innate. NL Gain !M! Momentum."
   },
 
+  "Clockwork:RitualDaggerMk0": {
+    "NAME": "Ritual Dagger Mk 0",
+    "DESCRIPTION": "Deal !D! damage. If this kills a non-Minion enemy, permanently increases this card's damage by !M!."
+  },
+
   "Clockwork:Roundhouse": {
     "NAME": "Roundhouse",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Draw !M! card.",
