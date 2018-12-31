@@ -124,6 +124,12 @@
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add !M! Cogs to your hand. NL Exhaustive !stslib:ex!."
   },
 
+  "Clockwork:QuantumStrike": {
+    "NAME": "Quantum Strike",
+    "DESCRIPTION": "Deal !D! damage. NL At the start of combat, split into !M! Entangled copies.",
+    "EXTENDED_DESCRIPTION": ["Deal !D! damage. NL Entangled."]
+  },
+
   "Clockwork:RampUp": {
     "NAME": "Ramp Up",
     "DESCRIPTION": "Whenever you play a card this turn, gain !M! Strength and !M! Dexterity until the end of the turn."
@@ -155,6 +161,11 @@
     "NAME": "Roundhouse",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Draw !M! card.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL Draw !M! cards."
+  },
+
+  "Clockwork:SearingStrike": {
+    "NAME": "Searing Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Can be upgraded any number of times."
   },
 
   "Clockwork:Selectivity": {

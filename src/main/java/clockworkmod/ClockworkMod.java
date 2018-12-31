@@ -22,6 +22,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.audio.Sfx;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
@@ -31,6 +32,8 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -41,7 +44,7 @@ import static basemod.BaseMod.addRelicToCustomPool;
 @SpireInitializer
 public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscriber,
         EditKeywordsSubscriber, EditRelicsSubscriber, EditCardsSubscriber, PostDrawSubscriber,
-        PostInitializeSubscriber {
+        PostInitializeSubscriber, OnStartBattleSubscriber {
 
     private static final Color CLOCKWORK_COLOR = CardHelper.getColor(33.0f, 144.0f, 255.0f);
     private static final String ASSETS_FOLDER = "clockworkmod/images";
@@ -149,7 +152,9 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
         //Uncommon Attacks
         BaseMod.addCard(new FalseStart());
         BaseMod.addCard(new PerfectedStrike_Clockwork());
+        BaseMod.addCard(new QuantumStrike());
         BaseMod.addCard(new RitualDaggerMk0());
+        BaseMod.addCard(new SearingStrike());
         BaseMod.addCard(new SmithsMallet());
         BaseMod.addCard(new StasisBreak());
 
@@ -214,6 +219,9 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
 
         BaseMod.addKeyword(new String[]{"depleting"},
                 "Permanently removes itself from your deck after a certain number of uses.");
+
+        BaseMod.addKeyword(new String[]{"entangled"},
+                "Entangled cards are treated as multiple instances of the same card. Effects that modify one will modify all.");
     }
 
     public static AbstractCard cog(boolean upgrade) {
@@ -287,6 +295,32 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
         }
         catch(Exception e) {
             e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void receiveOnBattleStart(AbstractRoom abstractRoom) {
+        CardGroup[] cardGroups = new CardGroup[]{
+                AbstractDungeon.player.drawPile,
+                AbstractDungeon.player.hand,
+                AbstractDungeon.player.discardPile,
+                AbstractDungeon.player.exhaustPile
+        };
+
+        CardGroup startupCards = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+
+        for (CardGroup cardGroup : cardGroups) {
+            for (AbstractCard c : cardGroup.group) {
+                if (c instanceof SafeStartupCard) {
+                    startupCards.addToBottom(c);
+                }
+            }
+        }
+
+        for (AbstractCard c : startupCards.group) {
+            if (((SafeStartupCard) c).atBattleStartPreDraw()) {
+                AbstractDungeon.effectList.add(0, new ShowCardBrieflyEffect(c.makeStatEquivalentCopy()));
+            }
         }
     }
 }
