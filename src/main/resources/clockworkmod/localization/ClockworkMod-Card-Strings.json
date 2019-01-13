@@ -168,6 +168,12 @@
     "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL Draw !M! cards."
   },
 
+  "Clockwork:Scour": {
+    "NAME": "Scour",
+    "DESCRIPTION": "Choose Attack or Skill. Draw until you draw a card of that type or your hand is full.",
+    "UPGRADE_DESCRIPTION": "Choose Attack, Skill, or Power. Draw cards until you draw a card of that type or your hand is full."
+  },
+
   "Clockwork:SearchingStrike": {
     "NAME": "Searching Strike",
     "DESCRIPTION": "Deal !D! damage. NL Fetch an Attack from your draw pile."
