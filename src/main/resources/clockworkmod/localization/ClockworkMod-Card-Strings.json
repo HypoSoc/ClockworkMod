@@ -74,6 +74,11 @@
     "DESCRIPTION": "Draw a card. Increase its damage and Block by !M! for the rest of combat."
   },
 
+  "Clockwork:EnthusiasticStrike": {
+    "NAME": "Enthusiastic Strike",
+    "DESCRIPTION": "Autoplay. NL Deal !D! damage to a random enemy. NL Draw !M! card."
+  },
+
   "Clockwork:FalseStart": {
     "NAME": "False Start",
     "DESCRIPTION": "Deal !D! damage. NL If it is your first turn, gain !M! Stasis.",

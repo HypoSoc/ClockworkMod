@@ -150,6 +150,7 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
         BaseMod.addCard(new SystemScan());
 
         //Uncommon Attacks
+        BaseMod.addCard(new EnthusiasticStrike());
         BaseMod.addCard(new FalseStart());
         BaseMod.addCard(new PerfectedStrike_Clockwork());
         BaseMod.addCard(new QuantumStrike());
