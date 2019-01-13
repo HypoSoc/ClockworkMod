@@ -154,11 +154,13 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
         BaseMod.addCard(new PerfectedStrike_Clockwork());
         BaseMod.addCard(new QuantumStrike());
         BaseMod.addCard(new RitualDaggerMk0());
+        BaseMod.addCard(new SearchingStrike());
         BaseMod.addCard(new SearingStrike());
         BaseMod.addCard(new SmithsMallet());
         BaseMod.addCard(new StasisBreak());
 
         //Uncommon Skills
+        BaseMod.addCard(new CraftBloodPhial());
         BaseMod.addCard(new CraftCopperScales());
         BaseMod.addCard(new Downsize());
         BaseMod.addCard(new RampUp());
@@ -226,7 +228,7 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
 
     public static AbstractCard cog(boolean upgrade) {
         AbstractCard cog = (new SpurCog()).makeCopy();
-        int v = AbstractDungeon.cardRandomRng.random(100);
+        int v = AbstractDungeon.cardRandomRng.random(200);
         logger.debug("Cog: " + v);
         // LUCKY SPIN
         if(v == 77){

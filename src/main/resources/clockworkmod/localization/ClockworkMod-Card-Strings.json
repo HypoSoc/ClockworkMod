@@ -42,6 +42,11 @@
     "DESCRIPTION": "Deal !D! damage. NL Shuffle !M! Cogs to your draw pile. NL Exhaustive !stslib:ex!."
   },
 
+  "Clockwork:CraftBloodPhial": {
+    "NAME": "Craft: Blood Phial",
+    "DESCRIPTION": "Ethereal. NL Heal !M! HP. NL Acquire Blood Phial. NL Fleeting."
+  },
+
   "Clockwork:CraftCopperScales": {
     "NAME": "Craft: Copper Scales",
     "DESCRIPTION": "Ethereal. NL Gain !M! Thorns. NL Acquire Copper Scales. NL Fleeting."
@@ -161,6 +166,11 @@
     "NAME": "Roundhouse",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Draw !M! card.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL Draw !M! cards."
+  },
+
+  "Clockwork:SearchingStrike": {
+    "NAME": "Searching Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Fetch an Attack from your draw pile."
   },
 
   "Clockwork:SearingStrike": {

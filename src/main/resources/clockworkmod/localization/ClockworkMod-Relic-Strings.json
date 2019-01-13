@@ -8,6 +8,15 @@
     ]
   },
 
+  "Clockwork:BloodPhial": {
+    "NAME": "Blood Phial",
+    "FLAVOR": "A vial containing a precise mixture of water and red food coloring.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, heal #b",
+      " HP."
+    ]
+  },
+
   "Clockwork:CopperScales": {
     "NAME": "Copper Scales",
     "FLAVOR": "A hodgepodge of metal inspired by (and stolen from) the Guardian.",
