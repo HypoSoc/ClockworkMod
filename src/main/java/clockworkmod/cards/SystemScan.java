@@ -41,6 +41,27 @@ public class SystemScan extends AbstractClockworkCard {
         }
     }
 
+    public void applyPowers() {
+        int deckSize = AbstractDungeon.player.drawPile.size()
+                + AbstractDungeon.player.discardPile.size()
+                + AbstractDungeon.player.hand.size();
+        int drawAmount = deckSize/this.magicNumber;
+        super.applyPowers();
+        String desc = strings.DESCRIPTION;
+        if(upgraded){
+            desc = strings.UPGRADE_DESCRIPTION;
+        }
+        if(drawAmount == 1){
+            this.rawDescription = desc + strings.EXTENDED_DESCRIPTION[0] +
+                    strings.EXTENDED_DESCRIPTION[1];
+        }
+        else{
+            this.rawDescription = desc + strings.EXTENDED_DESCRIPTION[0] +
+                    + drawAmount + strings.EXTENDED_DESCRIPTION[2];
+        }
+        initializeDescription();
+    }
+
     public AbstractCard makeCopy()
     {
         return new SystemScan();

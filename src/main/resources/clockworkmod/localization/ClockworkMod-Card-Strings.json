@@ -118,6 +118,12 @@
     "DESCRIPTION": "Deal !D! damage. NL If this kills a non-minion enemy, Acquire a Beating Heart. NL Exhaust."
   },
 
+  "Clockwork:MechanicalMass": {
+    "NAME": "Mechanical Mass",
+    "DESCRIPTION": "Deal !D! damage for every !M! cards in your deck.",
+    "EXTENDED_DESCRIPTION": [" NL Hits ", "1 time.", " times."]
+  },
+
   "Clockwork:Minimalism": {
     "NAME": "Minimalism",
     "DESCRIPTION": "Exhaust the top !M! cards of your draw pile. NL Exhaust."
@@ -175,8 +181,8 @@
 
   "Clockwork:Scour": {
     "NAME": "Scour",
-    "DESCRIPTION": "Choose Attack or Skill. Draw until you draw a card of that type or your hand is full.",
-    "UPGRADE_DESCRIPTION": "Choose Attack, Skill, or Power. Draw cards until you draw a card of that type or your hand is full."
+    "DESCRIPTION": "Choose Attack or Skill. Draw until you draw a card of that type or your hand is full. Discard all other cards drawn.",
+    "UPGRADE_DESCRIPTION": "Choose Attack, Skill, or Power. Draw cards until you draw a card of that type or your hand is full. Discard all other cards drawn."
   },
 
   "Clockwork:SearchingStrike": {
@@ -240,7 +246,8 @@
   "Clockwork:SystemScan": {
     "NAME": "System Scan",
     "DESCRIPTION": "Draw 1 card for every !M! cards in your deck. NL Discard 1 card.",
-    "UPGRADE_DESCRIPTION": "Draw 1 card for every !M! cards in your deck."
+    "UPGRADE_DESCRIPTION": "Draw 1 card for every !M! cards in your deck.",
+    "EXTENDED_DESCRIPTION": [" NL Draws ", "1 card.", " cards."]
   },
 
   "Clockwork:TimeWalk": {

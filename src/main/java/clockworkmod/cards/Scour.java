@@ -31,9 +31,9 @@ public class Scour extends AbstractClockworkCard implements ModalChoice.Callback
         modal = new ModalChoiceBuilder()
                 .setCallback(this) // Sets callback of all the below options to this
                 .setColor(CardColor.RED) // Sets color of any following cards to red
-                .addOption("Attack","Draw cards until you draw an Attack or your hand is full.", CardTarget.NONE)
+                .addOption("Attack","Draw cards until you draw an Attack or your hand is full. Discard all other cards drawn.", CardTarget.NONE)
                 .setColor(CardColor.GREEN) // Sets color of any following cards to green
-                .addOption("Skill", "Draw cards until you draw a Skill or your hand is full.", CardTarget.NONE)
+                .addOption("Skill", "Draw cards until you draw a Skill or your hand is full. Discard all other cards drawn.", CardTarget.NONE)
                 .create();
     }
 
@@ -58,11 +58,11 @@ public class Scour extends AbstractClockworkCard implements ModalChoice.Callback
             modal = new ModalChoiceBuilder()
                     .setCallback(this) // Sets callback of all the below options to this
                     .setColor(CardColor.RED) // Sets color of any following cards to red
-                    .addOption("Attack","Draw cards until you draw an Attack or your hand is full.", CardTarget.NONE)
+                    .addOption("Attack","Draw cards until you draw an Attack or your hand is full. Discard all other cards drawn.", CardTarget.NONE)
                     .setColor(CardColor.GREEN) // Sets color of any following cards to green
-                    .addOption("Skill","Draw cards until you draw a Skill or your hand is full.", CardTarget.NONE)
+                    .addOption("Skill","Draw cards until you draw a Skill or your hand is full. Discard all other cards drawn.", CardTarget.NONE)
                     .setColor(CardColor.BLUE) // Sets color of any following cards to green
-                    .addOption("Power","Draw cards until you draw a Power or your hand is full.", CardTarget.NONE)
+                    .addOption("Power","Draw cards until you draw a Power or your hand is full. Discard all other cards drawn.", CardTarget.NONE)
                     .create();
         }
     }

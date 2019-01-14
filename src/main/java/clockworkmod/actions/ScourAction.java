@@ -1,7 +1,9 @@
 package clockworkmod.actions;
 
 import basemod.BaseMod;
+import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.AutoplayField;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.EmptyDeckShuffleAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -33,11 +35,16 @@ public class ScourAction extends AbstractGameAction {
                 }
             }
             else{
-                if(AbstractDungeon.player.drawPile.getTopCard().type == type){
+                AbstractCard topCard = AbstractDungeon.player.drawPile.getTopCard();
+                if(topCard.type == type){
                     AbstractDungeon.actionManager.addToTop(new DrawCardAction(AbstractDungeon.player, 1));
                 } else {
                     AbstractDungeon.actionManager.addToTop(new ScourAction(type));
                     AbstractDungeon.actionManager.addToTop(new DrawCardAction(AbstractDungeon.player, 1));
+                    if(!AutoplayField.autoplay.get(topCard)) {
+                        AbstractDungeon.actionManager.addToBottom(
+                                new DiscardSpecificCardAction(topCard));
+                    }
                 }
             }
         }
