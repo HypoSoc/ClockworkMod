@@ -10,10 +10,7 @@ import clockworkmod.fields.DepletingSave;
 import clockworkmod.patches.AbstractCardEnum;
 import clockworkmod.patches.ClockworkEnum;
 import clockworkmod.powers.OnCardDrawEnemyPower;
-import clockworkmod.relics.BeatingHeart;
-import clockworkmod.relics.CopperScales;
-import clockworkmod.relics.GoldenCogRelic;
-import clockworkmod.relics.MomentumEngine;
+import clockworkmod.relics.*;
 import clockworkmod.variables.DepletingVariable;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -109,6 +106,9 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
         // Starter
         addRelicToCustomPool(new MomentumEngine(), AbstractCardEnum.CLOCKWORK);
 
+        // Boss
+        addRelicToCustomPool(new PerpetualMotionMachine(), AbstractCardEnum.CLOCKWORK);
+
         // Special
         addRelicToCustomPool(new BeatingHeart(), AbstractCardEnum.CLOCKWORK);
         addRelicToCustomPool(new CopperScales(), AbstractCardEnum.CLOCKWORK);
@@ -152,6 +152,7 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
         //Uncommon Attacks
         BaseMod.addCard(new EnthusiasticStrike());
         BaseMod.addCard(new FalseStart());
+        BaseMod.addCard(new HeadStart());
         BaseMod.addCard(new MechanicalMass());
         BaseMod.addCard(new PerfectedStrike_Clockwork());
         BaseMod.addCard(new QuantumStrike());

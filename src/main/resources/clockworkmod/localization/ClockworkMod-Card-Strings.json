@@ -101,6 +101,12 @@
     "UPGRADE_DESCRIPTION": "Add !M! Cogs to your hand. NL Acquire a Golden Cog. NL Fleeting."
   },
 
+  "Clockwork:HeadStart": {
+    "NAME": "Head Start",
+    "DESCRIPTION": "Innate. NL Deal !D! damage. NL If it is your first turn, gain [E] [E]",
+    "UPGRADE_DESCRIPTION": "Innate. NL Deal !D! damage. NL If it is your first turn, gain [E] [E] [E]"
+  },
+
   "Clockwork:HelicalCog": {
     "NAME": "Helical Cog",
     "DESCRIPTION": "Gain !B! Block. NL Draw !M! card. NL Exhaustive !stslib:ex!.",

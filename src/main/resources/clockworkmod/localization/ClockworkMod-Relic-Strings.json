@@ -43,5 +43,14 @@
       "At the start of combat, gain #b",
       " Momentum."
     ]
+  },
+
+  "Clockwork:PerpetualMotionMachine": {
+    "NAME": "Perpetual Motion Machine",
+    "FLAVOR": "Curse you, Second Law of Thermodynamics!",
+    "DESCRIPTIONS": [
+      "Lose [E] at the start of your turn. Whenever you draw #b",
+      " cards in a single turn, gain [E] , up to a maximum of #b5 times per turn. "
+    ]
   }
 }
