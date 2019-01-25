@@ -69,6 +69,12 @@
     "UPGRADE_DESCRIPTION": "Give a non-curse card Fleeting. It costs 0. NL Depleting !clock:dep!"
   },
 
+  "Clockwork:Efficiency": {
+    "NAME": "Efficiency",
+    "DESCRIPTION": "Deal !D! damage twice. NL Reduce the cost of a card in your hand by !M! for the rest of this combat.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage thrice. NL Reduce the cost of a card in your hand by !M! for the rest of this combat."
+  },
+
   "Clockwork:Enhance": {
     "NAME": "Enhance",
     "DESCRIPTION": "Draw a card. Increase its damage and Block by !M! for the rest of combat."
@@ -228,6 +234,13 @@
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Draw !M! cards. NL Exhaustive !stslib:ex!."
   },
 
+  "Clockwork:SpurOn": {
+    "NAME": "Spur On",
+    "DESCRIPTION": "Deal !D! damage. NL Add one Spur Cog to your hand for every !M! cards in your deck.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add one upgraded Spur Cog to your hand for every !M! cards in your deck.",
+    "EXTENDED_DESCRIPTION": [" NL Creates ", "1 Spur Cog.", " Spur Cogs."]
+  },
+
   "Clockwork:StasisBreak": {
     "NAME": "Stasis Break",
     "DESCRIPTION": "Innate. NL Deal !D! damage. NL Ignores the effects of Stasis."
@@ -254,6 +267,12 @@
     "DESCRIPTION": "Draw 1 card for every !M! cards in your deck. NL Discard 1 card.",
     "UPGRADE_DESCRIPTION": "Draw 1 card for every !M! cards in your deck.",
     "EXTENDED_DESCRIPTION": [" NL Draws ", "1 card.", " cards."]
+  },
+
+  "Clockwork:TiltAWhirl": {
+    "NAME": "Tilt-A-Whirl",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies X times. NL Draw X cards.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies X+1 times. NL Draw X+1 cards."
   },
 
   "Clockwork:TimeWalk": {

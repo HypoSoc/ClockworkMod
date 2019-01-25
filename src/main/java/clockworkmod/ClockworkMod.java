@@ -150,6 +150,7 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
         BaseMod.addCard(new SystemScan());
 
         //Uncommon Attacks
+        BaseMod.addCard(new Efficiency());
         BaseMod.addCard(new EnthusiasticStrike());
         BaseMod.addCard(new FalseStart());
         BaseMod.addCard(new HeadStart());
@@ -160,7 +161,9 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
         BaseMod.addCard(new SearchingStrike());
         BaseMod.addCard(new SearingStrike());
         BaseMod.addCard(new SmithsMallet());
+        BaseMod.addCard(new SpurOn());
         BaseMod.addCard(new StasisBreak());
+        BaseMod.addCard(new TiltAWhirl());
 
         //Uncommon Skills
         BaseMod.addCard(new CraftBloodPhial());
