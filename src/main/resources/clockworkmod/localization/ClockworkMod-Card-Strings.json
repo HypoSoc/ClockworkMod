@@ -27,6 +27,11 @@
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Every time this card is played, increase its Block by !M! for this combat. NL Rebound."
   },
 
+  "Clockwork:Clone": {
+    "NAME": "Clone",
+    "DESCRIPTION": "Choose a card that isn't Depleting, Exhaustive, or Fleeting. Add !M! Entangled copy of it to your draw pile. NL Exhaustive !stslib:ex!."
+  },
+
   "Clockwork:CogBarrier": {
     "NAME": "Cog Barrier",
     "DESCRIPTION": "Gain !B! Block. NL Add !M! Helical Cog to your hand."
@@ -279,6 +284,12 @@
     "DESCRIPTION": "Draw 1 card for every !M! cards in your deck. NL Discard 1 card.",
     "UPGRADE_DESCRIPTION": "Draw 1 card for every !M! cards in your deck.",
     "EXTENDED_DESCRIPTION": [" NL Draws ", "1 card.", " cards."]
+  },
+
+  "Clockwork:TestingEnvironment": {
+    "NAME": "Testing Environment",
+    "DESCRIPTION": "Choose Attack, or Skill. Choose 1 of 3 random cards of that type to add to your hand. It costs 0 this turn. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose Attack, Skill, or Power. Choose 1 of 3 random cards of that type to add to your hand. It costs 0 this turn. Exhaust."
   },
 
   "Clockwork:TiltAWhirl": {

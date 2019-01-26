@@ -167,6 +167,7 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
         BaseMod.addCard(new TiltAWhirl());
 
         //Uncommon Skills
+        BaseMod.addCard(new Clone());
         BaseMod.addCard(new CraftBloodPhial());
         BaseMod.addCard(new CraftCopperScales());
         BaseMod.addCard(new Downsize());
@@ -174,6 +175,7 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
         BaseMod.addCard(new Scour());
         BaseMod.addCard(new Selectivity());
         BaseMod.addCard(new SpringShield());
+        BaseMod.addCard(new TestingEnvironment());
 
         //Uncommon Powers
         BaseMod.addCard(new AssemblyLine());

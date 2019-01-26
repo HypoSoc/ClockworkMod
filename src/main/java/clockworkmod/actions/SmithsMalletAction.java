@@ -6,6 +6,8 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.GetAllInBattleInstances;
+
 import java.util.ArrayList;
 
 public class SmithsMalletAction
@@ -41,12 +43,7 @@ public class SmithsMalletAction
                 for (AbstractCard c : this.p.hand.group) {
                     if (c.canUpgrade())
                     {
-                        c.upgrade();
-                        c.superFlash();
-                        AbstractCard masterCard = StSLib.getMasterDeckEquivalent(c);
-                        if(masterCard != null){
-                            masterCard.upgrade();
-                        }
+                        applyEffect(c);
                         this.isDone = true;
                         return;
                     }
@@ -61,12 +58,7 @@ public class SmithsMalletAction
             }
             if (this.p.hand.group.size() == 1)
             {
-                this.p.hand.getTopCard().upgrade();
-                this.p.hand.getTopCard().superFlash();
-                AbstractCard masterCard = StSLib.getMasterDeckEquivalent(this.p.hand.getTopCard());
-                if(masterCard != null){
-                    masterCard.upgrade();
-                }
+                applyEffect(this.p.hand.getTopCard());
                 returnCards();
                 this.isDone = true;
             }
@@ -75,12 +67,7 @@ public class SmithsMalletAction
         {
             for (AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group)
             {
-                c.upgrade();
-                c.superFlash();
-                AbstractCard masterCard = StSLib.getMasterDeckEquivalent(c);
-                if(masterCard != null){
-                    masterCard.upgrade();
-                }
+                applyEffect(c);
                 this.p.hand.addToTop(c);
             }
             returnCards();
@@ -97,5 +84,20 @@ public class SmithsMalletAction
             this.p.hand.addToTop(c);
         }
         this.p.hand.refreshHandLayout();
+    }
+
+    private void applyEffect(AbstractCard card){
+        card.upgrade();
+        card.superFlash();
+        for (AbstractCard c : GetAllInBattleInstances.get(card.uuid)) {
+            if(c != card) {
+                c.upgrade();
+                c.superFlash();
+            }
+        }
+        AbstractCard masterCard = StSLib.getMasterDeckEquivalent(card);
+        if(masterCard != null){
+            masterCard.upgrade();
+        }
     }
 }

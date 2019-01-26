@@ -16,7 +16,7 @@ import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToDrawPileEffect;
 
 public class QuantumStrike extends AbstractClockworkCard implements SafeStartupCard {
     private static final String ID = getID("QuantumStrike");
-    private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
+    public static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/quantum_strike.png";
 
