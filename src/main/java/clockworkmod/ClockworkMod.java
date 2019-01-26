@@ -154,6 +154,7 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
         BaseMod.addCard(new EnthusiasticStrike());
         BaseMod.addCard(new FalseStart());
         BaseMod.addCard(new HeadStart());
+        BaseMod.addCard(new HoardingStrike());
         BaseMod.addCard(new MechanicalMass());
         BaseMod.addCard(new PerfectedStrike_Clockwork());
         BaseMod.addCard(new QuantumStrike());
@@ -172,6 +173,7 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
         BaseMod.addCard(new RampUp());
         BaseMod.addCard(new Scour());
         BaseMod.addCard(new Selectivity());
+        BaseMod.addCard(new SpringShield());
 
         //Uncommon Powers
         BaseMod.addCard(new AssemblyLine());
@@ -231,6 +233,9 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
 
         BaseMod.addKeyword(new String[]{"entangled"},
                 "Entangled cards are treated as multiple instances of the same card. Effects that modify one will modify all.");
+
+        BaseMod.addKeyword(new String[]{"windup"},
+                "Gets permanently stronger by a certain amount at the end of your turn, instead of being discarded. Do not wind up too tight.");
     }
 
     public static AbstractCard cog(boolean upgrade) {

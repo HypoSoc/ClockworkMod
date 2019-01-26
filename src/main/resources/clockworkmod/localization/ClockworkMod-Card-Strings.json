@@ -119,6 +119,11 @@
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Draw !M! cards. NL Exhaustive !stslib:ex!."
   },
 
+  "Clockwork:HoardingStrike": {
+    "NAME": "Hoarding Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for every Relic you have."
+  },
+
   "Clockwork:Improve": {
     "NAME": "Improve",
     "DESCRIPTION": "Draw a card and Upgrade it for the rest of combat.",
@@ -239,6 +244,13 @@
     "DESCRIPTION": "Deal !D! damage. NL Add one Spur Cog to your hand for every !M! cards in your deck.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add one upgraded Spur Cog to your hand for every !M! cards in your deck.",
     "EXTENDED_DESCRIPTION": [" NL Creates ", "1 Spur Cog.", " Spur Cogs."]
+  },
+
+  "Clockwork:SpringShield": {
+    "NAME": "Spring Shield",
+    "DESCRIPTION": "Windup !M!. NL Gain !B! Block. NL Permanently reset this card's Block to 3.",
+    "UPGRADE_DESCRIPTION": "Innate. Windup !M! NL Gain !B! Block. NL Permanently reset this card's Block back to 3.",
+    "EXTENDED_DESCRIPTION": ["Oops. I broke it."]
   },
 
   "Clockwork:StasisBreak": {
