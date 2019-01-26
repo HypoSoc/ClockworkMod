@@ -58,7 +58,7 @@
   "Clockwork:ZeroPointEnergy": {
     "NAME": "Zero Point Energy",
     "DESCRIPTIONS": [
-      "At the start of your turn, if you are in Stasis, gain", " [E]", " ."
+      "At the start of your turn, if you did no damage last turn, gain", " [E]", " ."
     ]
   }
 }

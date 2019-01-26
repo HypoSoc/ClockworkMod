@@ -23,9 +23,9 @@ public class StasisBreak extends AbstractClockworkCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
 
-    private static final int COST = 1;
-    private static final int POWER = 9;
-    private static final int UPGRADE_BONUS = 4;
+    private static final int COST = 0;
+    private static final int POWER = 4;
+    private static final int UPGRADE_BONUS = 2;
 
     public StasisBreak()
     {

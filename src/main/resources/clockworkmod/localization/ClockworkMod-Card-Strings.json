@@ -249,7 +249,7 @@
   "Clockwork:SpringShield": {
     "NAME": "Spring Shield",
     "DESCRIPTION": "Windup !M!. NL Gain !B! Block. NL Permanently reset this card's Block to 3.",
-    "UPGRADE_DESCRIPTION": "Innate. Windup !M! NL Gain !B! Block. NL Permanently reset this card's Block back to 3.",
+    "UPGRADE_DESCRIPTION": "Innate. Windup !M! NL Gain !B! Block. NL Permanently reset this card's Block.",
     "EXTENDED_DESCRIPTION": ["Oops. I broke it."]
   },
 
@@ -311,8 +311,8 @@
 
   "Clockwork:ZeroPointEnergy": {
     "NAME": "Zero Point Energy",
-    "DESCRIPTION": "Innate. NL Gain !M! Stasis. NL At the start of each turn, if you are in Stasis, gain [E] [E]",
-    "UPGRADE_DESCRIPTION": "Innate. NL Gain !M! Stasis. NL At the start of each turn, if you are in Stasis, gain [E] [E] [E]"
+    "DESCRIPTION": "Innate. NL At the start of each turn, if you did no damage last turn, gain [E]",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of each turn, if you did no damage last turn, gain [E] [E]"
   },
 
   "Placeholder": {

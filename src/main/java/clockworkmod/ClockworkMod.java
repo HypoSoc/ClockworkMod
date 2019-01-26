@@ -235,7 +235,7 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
                 "Entangled cards are treated as multiple instances of the same card. Effects that modify one will modify all.");
 
         BaseMod.addKeyword(new String[]{"windup"},
-                "Gets permanently stronger by a certain amount at the end of your turn, instead of being discarded. Do not wind up too tight.");
+                "Gets permanently stronger by a certain amount at the end of your turn, instead of being discarded. WARNING: Do not wind up too tight.");
     }
 
     public static AbstractCard cog(boolean upgrade) {

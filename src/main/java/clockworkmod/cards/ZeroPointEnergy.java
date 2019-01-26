@@ -1,6 +1,5 @@
 package clockworkmod.cards;
 
-import clockworkmod.powers.StasisPower;
 import clockworkmod.powers.ZeroPointEnergyPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -20,24 +19,18 @@ public class ZeroPointEnergy extends AbstractClockworkCard {
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
 
-    private static final int COST = 0;
-    private static final int MAGIC = 1;
-    private static final int ENERGY = 2;
-    private static final int UPGRADED_ENERGY = 3;
+    private static final int COST = 1;
+    private static final int ENERGY = 1;
+    private static final int UPGRADED_ENERGY = 2;
 
     public ZeroPointEnergy()
     {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
-
-        this.baseMagicNumber = MAGIC;
-        this.magicNumber = this.baseMagicNumber;
         this.isInnate = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)
     {
-        AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(p, p, new StasisPower(p, this.magicNumber), this.magicNumber));
         int energy = ENERGY;
         if(this.upgraded){
             energy = UPGRADED_ENERGY;

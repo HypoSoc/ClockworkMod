@@ -1,18 +1,21 @@
 package clockworkmod.powers;
 
 import clockworkmod.ClockworkMod;
-import clockworkmod.actions.DelayedPowerTriggerAction;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class ZeroPointEnergyPower extends AbstractClockworkPower {
     private static final String POWER_ID = getID("ZeroPointEnergy");
     private static final PowerStrings strings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     private static final Texture IMG = new Texture(ClockworkMod.getResourcePath("powers/zero_point_energy.png"));
+
+    private boolean pacifist;
 
     public ZeroPointEnergyPower(AbstractCreature owner, int amount) {
         this.name = strings.NAME;
@@ -24,6 +27,7 @@ public class ZeroPointEnergyPower extends AbstractClockworkPower {
         this.amount = amount;
         this.priority = 1;
         this.updateDescription();
+        this.pacifist = true;
     }
 
     public void updateDescription()
@@ -38,15 +42,21 @@ public class ZeroPointEnergyPower extends AbstractClockworkPower {
     }
 
     @Override
-    public void onSpecificTrigger(){
-        if(this.owner.hasPower(StasisPower.POWER_ID)) {
-            flash();
-            AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(this.amount));
+    public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
+        ClockworkMod.logger.debug("!!!");
+        if(target != this.owner && info.type != DamageInfo.DamageType.THORNS && damageAmount > 0){
+            this.pacifist = false;
+            ClockworkMod.logger.debug("???");
         }
     }
 
     @Override
-    public void atStartOfTurnPostDraw() {
-        AbstractDungeon.actionManager.addToBottom(new DelayedPowerTriggerAction(this));
+    public void atStartOfTurn() {
+        ClockworkMod.logger.debug("...");
+        if(this.pacifist) {
+            flash();
+            AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(this.amount));
+        }
+        this.pacifist = true;
     }
 }
