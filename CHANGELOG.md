@@ -1,3 +1,11 @@
+# Version 0.0.4
+
+Even more Balance Tweaks, some Balance Shoves. Some reworks.
+
+All Uncommon Attacks are now Implemented
+
+59/81 Cards completed. 6/13 Relics.
+
 # Version 0.0.3
 
 Balance Tweaks
