@@ -135,9 +135,21 @@
     "UPGRADE_DESCRIPTION": "Draw a card and Upgrade it for the rest of combat. NL If it is already upgraded, reduce its cost by !M! for the rest of combat."
   },
 
+  "Clockwork:InertialShield": {
+    "NAME": "Inertial Shield",
+    "DESCRIPTION": "Gain !B! block. NL Draw a card for every !M! Block you have.",
+    "EXTENDED_DESCRIPTION": [" NL Draws ", "1 card.", " cards."]
+  },
+
   "Clockwork:KaliMa": {
     "NAME": "KALI MA",
     "DESCRIPTION": "Deal !D! damage. NL If this kills a non-minion enemy, Acquire a Beating Heart. NL Exhaust."
+  },
+
+  "Clockwork:MechanicalBulk": {
+    "NAME": "Mechanical Bulk",
+    "DESCRIPTION": "Gain !B! Block for every !M! cards in your deck.",
+    "EXTENDED_DESCRIPTION": [" NL Applies ", "1 time.", " times."]
   },
 
   "Clockwork:MechanicalMass": {
@@ -149,6 +161,11 @@
   "Clockwork:Minimalism": {
     "NAME": "Minimalism",
     "DESCRIPTION": "Exhaust the top !M! cards of your draw pile. NL Exhaust."
+  },
+
+  "Clockwork:PerfectedShield": {
+    "NAME": "Perfected Shield",
+    "DESCRIPTION": "Gain !B! Block. NL Gains !M! additional Block for ALL your cards containing \"Shield\"."
   },
 
   "Clockwork:PerfectedStrike": {

@@ -171,6 +171,9 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
         BaseMod.addCard(new CraftBloodPhial());
         BaseMod.addCard(new CraftCopperScales());
         BaseMod.addCard(new Downsize());
+        BaseMod.addCard(new InertialShield());
+        BaseMod.addCard(new MechanicalBulk());
+        BaseMod.addCard(new PerfectedShield());
         BaseMod.addCard(new RampUp());
         BaseMod.addCard(new Scour());
         BaseMod.addCard(new Selectivity());
