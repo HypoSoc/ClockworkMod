@@ -50,6 +50,7 @@ public class PerpetualMotionMachine extends AbstractClockworkRelic {
     {
         this.counter = 0;
         remainingEnergy = 5;
+        this.pulse = true;
     }
 
     @Override
@@ -60,6 +61,9 @@ public class PerpetualMotionMachine extends AbstractClockworkRelic {
                 flash();
                 this.counter = 0;
                 remainingEnergy--;
+                if(remainingEnergy <= 0){
+                    this.pulse = false;
+                }
                 AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, this));
                 AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
             }

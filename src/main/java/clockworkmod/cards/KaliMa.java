@@ -20,16 +20,16 @@ public class KaliMa extends AbstractClockworkCard {
     private static final CardTarget TARGET = CardTarget.ENEMY;
 
     private static final int COST = 1;
-    private static final int POWER = 3;
-    private static final int UPGRADE_POWER_BONUS = 3;
+    private static final int POWER = 8;
+    private static final int UPGRADE_POWER_BONUS = 4;
 
     public KaliMa()
     {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseDamage = POWER;
-        this.exhaust = true;
         this.tags.add(CardTags.HEALING);
+        this.exhaust = true;
     }
 
     @Override

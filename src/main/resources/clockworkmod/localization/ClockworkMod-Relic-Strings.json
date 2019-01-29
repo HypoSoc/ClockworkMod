@@ -52,5 +52,23 @@
       "Lose [E] at the start of your turn. Whenever you draw #b",
       " cards in a single turn, gain [E] , up to a maximum of #b5 times per turn. "
     ]
+  },
+
+  "Clockwork:SomewhatSmoothStone": {
+    "NAME": "Somewhat Smooth Stone",
+    "FLAVOR": "Step One: Fine a Rock. \n Step Two: Apply Angle Grinder. \n Step 3: Profit.",
+    "DESCRIPTIONS": [
+      "At the start of combat, gain #b",
+      " Dexterity."
+    ]
+  },
+
+  "Clockwork:Varja": {
+    "NAME": "Varja",
+    "FLAVOR": "A papier-mâché ornament meant to invoke the glory of warriors.",
+    "DESCRIPTIONS": [
+      "At the start of combat, gain #b",
+      " Strength."
+    ]
   }
 }

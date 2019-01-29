@@ -30,7 +30,8 @@ public class KaliMaAction extends AbstractGameAction
 
             this.target.damage(this.info);
             if (((((AbstractMonster)this.target).isDying) || (this.target.currentHealth <= 0)) && (!this.target.halfDead) &&
-                    (!this.target.hasPower("Minion")))
+                    ((((AbstractMonster)this.target).type == AbstractMonster.EnemyType.ELITE) ||
+                            (((AbstractMonster)this.target).type == AbstractMonster.EnemyType.BOSS)))
             {
                 AbstractDungeon.actionManager.addToTop(new GainRelicAction(new BeatingHeart()));
             }

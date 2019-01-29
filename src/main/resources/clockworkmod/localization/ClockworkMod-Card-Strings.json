@@ -49,17 +49,27 @@
 
   "Clockwork:CraftBloodPhial": {
     "NAME": "Craft: Blood Phial",
-    "DESCRIPTION": "Ethereal. NL Heal !M! HP. NL Acquire Blood Phial. NL Fleeting."
+    "DESCRIPTION": "Ethereal. NL Heal !M! HP. NL When you Deplete this card, Acquire a Blood Phial. NL Depleting !clock:dep!"
   },
 
   "Clockwork:CraftCopperScales": {
     "NAME": "Craft: Copper Scales",
-    "DESCRIPTION": "Ethereal. NL Gain !M! Thorns. NL Acquire Copper Scales. NL Fleeting."
+    "DESCRIPTION": "Ethereal. NL Gain !M! Thorns. NL When you Deplete this card, Acquire Copper Scales. NL Depleting !clock:dep!"
   },
 
   "Clockwork:CraftMomentumEngine": {
     "NAME": "Craft: M. Engine",
-    "DESCRIPTION": "Ethereal. NL Gain !M! Momentum. NL Acquire a Momentum Engine. NL Fleeting."
+    "DESCRIPTION": "Ethereal. NL Gain !M! Momentum. NL When you Deplete this card, Acquire a Momentum Engine. NL Depleting !clock:dep!"
+  },
+
+  "Clockwork:CraftSomewhatSmoothStone": {
+    "NAME": "Craft: S. S. Stone",
+    "DESCRIPTION": "Ethereal. NL Gain !M! Dexterity. NL When you Deplete this card, Acquire a Somewhat Smooth Stone. NL Depleting !clock:dep!"
+  },
+
+  "Clockwork:CraftVarja": {
+    "NAME": "Craft: Varja",
+    "DESCRIPTION": "Ethereal. NL Gain !M! Strength. NL When you Deplete this card, Acquire a Varja. NL Depleting !clock:dep!"
   },
 
   "Clockwork:DefectiveCog": {
@@ -143,7 +153,13 @@
 
   "Clockwork:KaliMa": {
     "NAME": "KALI MA",
-    "DESCRIPTION": "Deal !D! damage. NL If this kills a non-minion enemy, Acquire a Beating Heart. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL If this kills an Elite or Boss enemy, Acquire a Beating Heart. NL Exhaust."
+  },
+
+  "Clockwork:LogisticRegression": {
+    "NAME": "Logistic Regression",
+    "DESCRIPTION": "At the start of your turn, draw !M! additional card.",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, draw !M! additional cards."
   },
 
   "Clockwork:MechanicalBulk": {
@@ -313,6 +329,12 @@
     "NAME": "Tilt-A-Whirl",
     "DESCRIPTION": "Deal !D! damage to ALL enemies X times. NL Draw X cards.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies X+1 times. NL Draw X+1 cards."
+  },
+
+  "Clockwork:TimeOut": {
+    "NAME": "Time Out",
+    "DESCRIPTION": "Gain !B! Block. NL Block is not removed at the start of your next turn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Block is not removed at the start of your next two turns. NL Exhaust."
   },
 
   "Clockwork:TimeWalk": {

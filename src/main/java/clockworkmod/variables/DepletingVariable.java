@@ -81,4 +81,9 @@ public class DepletingVariable extends DynamicVariable
         }
         card.initializeDescription();
     }
+
+    public static boolean isDepleted(AbstractCard card)
+    {
+        return DepletingField.DepletingFields.depleting.get(card) <= 0;
+    }
 }

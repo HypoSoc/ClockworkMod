@@ -3,7 +3,7 @@ package clockworkmod.cards;
 import clockworkmod.actions.GainRelicAction;
 import clockworkmod.patches.TagEnum;
 import clockworkmod.relics.CopperScales;
-import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.FleetingField;
+import clockworkmod.variables.DepletingVariable;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -36,7 +36,7 @@ public class CraftCopperScales extends AbstractClockworkCard {
         this.tags.add(TagEnum.CRAFT);
         this.tags.add(CardTags.HEALING);
         this.isEthereal = true;
-        FleetingField.fleeting.set(this, true);
+        DepletingVariable.setBaseValue(this,3);
     }
 
     @Override
@@ -44,7 +44,9 @@ public class CraftCopperScales extends AbstractClockworkCard {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
                 AbstractDungeon.player, AbstractDungeon.player,
                 new ThornsPower(AbstractDungeon.player, this.magicNumber), this.magicNumber));
-        AbstractDungeon.actionManager.addToBottom(new GainRelicAction(new CopperScales()));
+        if(DepletingVariable.isDepleted(this)) {
+            AbstractDungeon.actionManager.addToBottom(new GainRelicAction(new CopperScales()));
+        }
     }
 
     public AbstractCard makeCopy()

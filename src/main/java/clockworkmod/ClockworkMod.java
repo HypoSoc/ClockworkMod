@@ -111,8 +111,11 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
 
         // Special
         addRelicToCustomPool(new BeatingHeart(), AbstractCardEnum.CLOCKWORK);
+        addRelicToCustomPool(new BloodPhial(), AbstractCardEnum.CLOCKWORK);
         addRelicToCustomPool(new CopperScales(), AbstractCardEnum.CLOCKWORK);
         addRelicToCustomPool(new GoldenCogRelic(), AbstractCardEnum.CLOCKWORK);
+        addRelicToCustomPool(new SomewhatSmoothStone(), AbstractCardEnum.CLOCKWORK);
+        addRelicToCustomPool(new Varja(), AbstractCardEnum.CLOCKWORK);
     }
 
     @Override
@@ -170,6 +173,8 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
         BaseMod.addCard(new Clone());
         BaseMod.addCard(new CraftBloodPhial());
         BaseMod.addCard(new CraftCopperScales());
+        BaseMod.addCard(new CraftSomewhatSmoothStone());
+        BaseMod.addCard(new CraftVarja());
         BaseMod.addCard(new Downsize());
         BaseMod.addCard(new InertialShield());
         BaseMod.addCard(new MechanicalBulk());
@@ -179,9 +184,11 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
         BaseMod.addCard(new Selectivity());
         BaseMod.addCard(new SpringShield());
         BaseMod.addCard(new TestingEnvironment());
+        BaseMod.addCard(new TimeOut());
 
         //Uncommon Powers
         BaseMod.addCard(new AssemblyLine());
+        BaseMod.addCard(new LogisticRegression());
         BaseMod.addCard(new RevUp());
 
         //Rare Attacks
