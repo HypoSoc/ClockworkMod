@@ -156,6 +156,11 @@
     "DESCRIPTION": "Deal !D! damage. NL If this kills an Elite or Boss enemy, Acquire a Beating Heart. NL Exhaust."
   },
 
+  "Clockwork:LiteraryArmor": {
+    "NAME": "Literary Armor",
+    "DESCRIPTION": "Each turn, when you draw 7 cards for the first time, gain !M! Plated Armor."
+  },
+
   "Clockwork:LogisticRegression": {
     "NAME": "Logistic Regression",
     "DESCRIPTION": "At the start of your turn, draw !M! additional card.",

@@ -188,6 +188,7 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
 
         //Uncommon Powers
         BaseMod.addCard(new AssemblyLine());
+        BaseMod.addCard(new LiteraryArmor());
         BaseMod.addCard(new LogisticRegression());
         BaseMod.addCard(new RevUp());
 

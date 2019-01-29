@@ -13,6 +13,13 @@
       " for the rest of combat."
     ]
   },
+  "Clockwork:LiteraryArmor": {
+    "NAME": "Literary Armor",
+    "DESCRIPTIONS": [
+      "If you draw #b", " more card this turn, gain #b", " more cards this turn, gain #b",
+      " Plated Armor.", "You have already gained Plated Armor this turn."
+    ]
+  },
   "Clockwork:RampUp": {
     "NAME": "Ramp Up",
     "DESCRIPTIONS": [

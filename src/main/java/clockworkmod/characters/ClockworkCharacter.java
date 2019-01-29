@@ -94,7 +94,7 @@ public class ClockworkCharacter extends CustomPlayer {
     @Override
     public CharSelectInfo getLoadout() {
         return new CharSelectInfo("The Clockwork", "A curious creation, seeking to improve itself. NL Upgrades itself over the course of combat.",
-                70, 70, 0, 9,
+                70, 70, 0, 99,
                 5, this, getStartingRelics(), getStartingDeck(), false);
     }
 
