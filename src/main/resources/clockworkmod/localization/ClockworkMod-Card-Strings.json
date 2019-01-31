@@ -90,6 +90,12 @@
     "UPGRADE_DESCRIPTION": "Deal !D! damage thrice. NL Reduce the cost of a card in your hand by !M! for the rest of this combat."
   },
 
+  "Clockwork:ElasticNanites": {
+    "NAME": "Elastic Nanites",
+    "DESCRIPTION": "Innate. Ethereal. NL Every 4 turns, gain !M! Buffer.",
+    "UPGRADE_DESCRIPTION": "Innate. Ethereal. NL Gain !M! Buffer. NL Every 4 turns, gain !M! Buffer."
+  },
+
   "Clockwork:Enhance": {
     "NAME": "Enhance",
     "DESCRIPTION": "Draw a card. Increase its damage and Block by !M! for the rest of combat."
@@ -182,6 +188,11 @@
   "Clockwork:Minimalism": {
     "NAME": "Minimalism",
     "DESCRIPTION": "Exhaust the top !M! cards of your draw pile. NL Exhaust."
+  },
+
+  "Clockwork:OccamsRazor": {
+    "NAME": "Occam's Razor",
+    "DESCRIPTION": "At the start of your turn, you may Exhaust a card."
   },
 
   "Clockwork:PerfectedShield": {

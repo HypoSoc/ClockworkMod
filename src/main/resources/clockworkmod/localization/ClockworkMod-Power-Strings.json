@@ -6,11 +6,18 @@
       " Cog into your draw pile.", " Cogs into your draw pile."
     ]
   },
-  "Clockwork:Momentum": {
-    "NAME": "Momentum",
+  "Clockwork:ElasticNanites": {
+    "NAME": "Elastic Nanites",
     "DESCRIPTIONS": [
-      "After you play a card, increase its damage and Block by #b",
-      " for the rest of combat."
+      "In #b", " turn, gain #b", " turns, gain #b",
+      " Buffer."
+    ]
+  },
+  "Clockwork:OccamsRazor": {
+    "NAME": "Occam's Razor",
+    "DESCRIPTIONS": [
+      "At the start of your turn, you may Exhaust up to #b",
+      " card.", " cards."
     ]
   },
   "Clockwork:LiteraryArmor": {
@@ -18,6 +25,13 @@
     "DESCRIPTIONS": [
       "If you draw #b", " more card this turn, gain #b", " more cards this turn, gain #b",
       " Plated Armor.", "You have already gained Plated Armor this turn."
+    ]
+  },
+  "Clockwork:Momentum": {
+    "NAME": "Momentum",
+    "DESCRIPTIONS": [
+      "After you play a card, increase its damage and Block by #b",
+      " for the rest of combat."
     ]
   },
   "Clockwork:RampUp": {
