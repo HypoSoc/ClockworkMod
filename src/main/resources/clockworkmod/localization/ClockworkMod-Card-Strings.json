@@ -195,6 +195,11 @@
     "DESCRIPTION": "At the start of your turn, you may Exhaust a card."
   },
 
+  "Clockwork:OverlyWoundupStrike": {
+    "NAME": "Snapped Strike",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+
   "Clockwork:PerfectedShield": {
     "NAME": "Perfected Shield",
     "DESCRIPTION": "Gain !B! Block. NL Gains !M! additional Block for ALL your cards containing \"Shield\"."
@@ -302,7 +307,7 @@
 
   "Clockwork:SpringShield": {
     "NAME": "Spring Shield",
-    "DESCRIPTION": "Windup !M!. NL Gain !B! Block. NL Permanently reset this card's Block to 3.",
+    "DESCRIPTION": "Windup !M!. NL Gain !B! Block. NL Permanently reset this card's Block.",
     "UPGRADE_DESCRIPTION": "Innate. Windup !M! NL Gain !B! Block. NL Permanently reset this card's Block.",
     "EXTENDED_DESCRIPTION": ["Oops. I broke it."]
   },
@@ -373,6 +378,18 @@
     "NAME": "Warm Up",
     "DESCRIPTION": "Innate. Cannot be played after other cards in a turn. NL Gain !M! Stasis. NL Exhaust.",
     "EXTENDED_DESCRIPTION": ["I have already played a card this turn."]
+  },
+
+  "Clockwork:WindupStrike": {
+    "NAME": "Windup Strike",
+    "DESCRIPTION": "Windup !M!. NL Deal !D! damage. NL Permanently replace this card with a Woundup Strike.",
+    "UPGRADE_DESCRIPTION": "Innate. Windup !M!. NL Deal !D! damage. NL Permanently replace this card with a Woundup Strike.",
+    "EXTENDED_DESCRIPTION": ["Darn it..."]
+  },
+
+  "Clockwork:WoundupStrike": {
+    "NAME": "Woundup Strike",
+    "DESCRIPTION": "Deal !D! damage."
   },
 
   "Clockwork:ZeroPointEnergy": {

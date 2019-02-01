@@ -1,5 +1,6 @@
 package clockworkmod.actions;
 
+import clockworkmod.cards.AbstractClockworkCard;
 import clockworkmod.cards.QuantumStrike;
 import clockworkmod.fields.DepletingField;
 import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.ExhaustiveField;
@@ -94,6 +95,12 @@ public class CloneAction extends AbstractGameAction {
     private void act(AbstractCard card) {
         for(int i=0;i<this.amount;i++){
             AbstractCard c = card.makeSameInstanceOf();
+            if(c instanceof AbstractClockworkCard){
+                ((AbstractClockworkCard) c).tinkerIncrementor =
+                        ((AbstractClockworkCard) card).tinkerIncrementor;
+                ((AbstractClockworkCard) c).momentumIncrementor =
+                        ((AbstractClockworkCard) card).momentumIncrementor;
+            }
             if(c instanceof QuantumStrike){
                 c.rawDescription = QuantumStrike.strings.EXTENDED_DESCRIPTION[0];
                 c.initializeDescription();

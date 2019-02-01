@@ -197,6 +197,7 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
         //Rare Attacks
         BaseMod.addCard(new KaliMa());
         BaseMod.addCard(new Strangle());
+        BaseMod.addCard(new WindupStrike());
 
         //Rare Skills
         BaseMod.addCard(new CraftMomentumEngine());
@@ -210,7 +211,9 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
         BaseMod.addCard(new DefectiveCog());
         BaseMod.addCard(new GoldenCog());
         BaseMod.addCard(new HelicalCog());
+        BaseMod.addCard(new OverlyWoundupStrike());
         BaseMod.addCard(new SpurCog());
+        BaseMod.addCard(new WoundupStrike());
     }
 
     @Override
