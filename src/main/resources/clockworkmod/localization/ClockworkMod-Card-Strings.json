@@ -227,6 +227,12 @@
     "DESCRIPTION": "Whenever you play a card this turn, gain !M! Strength and !M! Dexterity until the end of the turn."
   },
 
+  "Clockwork:Randomization": {
+    "NAME": "Randomization",
+    "DESCRIPTION": "Play !M! random attacks and add them to your deck. NL Affected by Momentum.",
+    "UPGRADE_DESCRIPTION": "Play !M! random Upgraded attacks and add them to your deck. NL Affected by Momentum."
+  },
+
   "Clockwork:Redundancy": {
     "NAME": "Redundancy",
     "DESCRIPTION": "Deal !D! damage. NL Costs [E] less energy for every !M! cards in your deck."

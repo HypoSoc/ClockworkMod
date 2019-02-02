@@ -12,4 +12,7 @@ public class TagEnum {
 
     @SpireEnum
     public static AbstractCard.CardTags CRAFT;
+
+    @SpireEnum
+    public static AbstractCard.CardTarget RANDOMIZATION_WORKAROUND;
 }

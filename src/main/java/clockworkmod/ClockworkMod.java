@@ -196,6 +196,7 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
 
         //Rare Attacks
         BaseMod.addCard(new KaliMa());
+        BaseMod.addCard(new Randomization());
         BaseMod.addCard(new Strangle());
         BaseMod.addCard(new WindupStrike());
 

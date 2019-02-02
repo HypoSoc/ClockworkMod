@@ -2,6 +2,7 @@ package clockworkmod.powers;
 
 import clockworkmod.ClockworkMod;
 import clockworkmod.cards.AbstractClockworkCard;
+import clockworkmod.cards.Randomization;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -10,6 +11,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.GetAllInBattleInstances;
 import com.megacrit.cardcrawl.localization.PowerStrings;
+
+import java.time.Clock;
 
 public class MomentumPower extends AbstractClockworkPower {
     private static final String POWER_ID = getID("Momentum");
@@ -53,6 +56,10 @@ public class MomentumPower extends AbstractClockworkPower {
             }
             if(c instanceof AbstractClockworkCard){
                 ((AbstractClockworkCard) c).momentumIncrementor += this.amount;
+            }
+            if(c instanceof Randomization) {
+                c.baseMagicNumber += this.amount;
+                c.magicNumber += this.amount;
             }
         }
         if(this.left){
