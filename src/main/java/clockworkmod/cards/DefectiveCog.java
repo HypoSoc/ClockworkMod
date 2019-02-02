@@ -23,7 +23,7 @@ public class DefectiveCog extends AbstractClockworkCard {
     private static final CardTarget TARGET = CardTarget.SELF;
 
     private static final int COST = 0;
-    private static final int POWER = 20;
+    private static final int POWER = 15;
     private static final int MAGIC = 1;
     private static final int UPGRADE_BONUS = 1;
 
@@ -42,6 +42,19 @@ public class DefectiveCog extends AbstractClockworkCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, this.magicNumber));
+    }
+
+    private int getDefectivePartsBonus(){
+        if(AbstractDungeon.player.hasPower("Clockwork:DefectiveParts")){
+            return AbstractDungeon.player.getPower("Clockwork:DefectiveParts").amount;
+        }
+        return 0;
+    }
+
+    @Override
+    public void applyPowers() {
+        this.baseDamage = POWER + getDefectivePartsBonus() + momentumIncrementor + tinkerIncrementor;
+        super.applyPowers();
     }
 
     @Override

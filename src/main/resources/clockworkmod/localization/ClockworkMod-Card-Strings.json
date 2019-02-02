@@ -89,6 +89,11 @@
     "UPGRADE_DESCRIPTION": "Draw !M! cards. NL When this card is exhausted, deal !D! damage to ALL enemies. NL Exhaustive !stslib:ex!."
   },
 
+  "Clockwork:DefectiveParts": {
+    "NAME": "Defective Parts",
+    "DESCRIPTION": "All Cogs you create are Defective. NL Defective Cogs deal !M! additional damage."
+  },
+
   "Clockwork:Downsize": {
     "NAME": "Downsize",
     "DESCRIPTION": "Permanently remove a non-Curse card from your deck. NL Depleting !clock:dep!.",
@@ -259,6 +264,12 @@
     "NAME": "Randomization",
     "DESCRIPTION": "Play !M! random attacks and add them to your deck. NL Affected by Momentum.",
     "UPGRADE_DESCRIPTION": "Play !M! random Upgraded attacks and add them to your deck. NL Affected by Momentum."
+  },
+
+  "Clockwork:ReactiveNanites": {
+    "NAME": "Reactive Nanites",
+    "DESCRIPTION": "Ethereal. NL At the start of your turn, gain !M! Thorns and !M! Plated Armor.",
+    "UPGRADE_DESCRIPTION": "Innate. Ethereal. NL At the start of your turn, gain !M! Thorns and !M! Plated Armor."
   },
 
   "Clockwork:Redundancy": {

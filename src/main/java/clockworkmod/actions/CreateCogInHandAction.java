@@ -43,7 +43,7 @@ public class CreateCogInHandAction extends AbstractGameAction {
     }
 
     private AbstractCard getCog(){
-        if(cog == null){
+        if(cog == null || AbstractDungeon.player.hasPower("Clockwork:DefectiveParts")){
             return ClockworkMod.cog(this.upgrade);
         } else{
             AbstractCard newCog = cog.makeCopy();

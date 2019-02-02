@@ -211,7 +211,9 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
         BaseMod.addCard(new TimeWalk());
 
         //Rare Powers
+        BaseMod.addCard(new DefectiveParts());
         BaseMod.addCard(new PerfectForm());
+        BaseMod.addCard(new ReactiveNanites());
         BaseMod.addCard(new UnlimitedCogworks());
         BaseMod.addCard(new ZeroPointEnergy());
 
@@ -266,23 +268,30 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
 
     public static AbstractCard cog(boolean upgrade) {
         AbstractCard cog = (new SpurCog()).makeCopy();
-        int v = AbstractDungeon.cardRandomRng.random(200);
-        logger.debug("Cog: " + v);
-        // LUCKY SPIN
-        if(v == 77){
-            cog = (new GoldenCog()).makeCopy();
-        }
-        else {
-            v %= 5;
-            if (v == 0 || v == 3) {
-                cog = (new SpurCog()).makeCopy();
-            } else if (v == 1 || v == 4) {
-                cog = (new HelicalCog()).makeCopy();
-            } else if (v == 2) {
-                cog = (new DefectiveCog()).makeCopy();
-            }
+        if(AbstractDungeon.player.hasPower("Clockwork:DefectiveParts")){
+            cog = (new DefectiveCog()).makeCopy();
             if (upgrade) {
                 cog.upgrade();
+            }
+        }
+        else {
+            int v = AbstractDungeon.cardRandomRng.random(200);
+            logger.debug("Cog: " + v);
+            // LUCKY SPIN
+            if (v == 77) {
+                cog = (new GoldenCog()).makeCopy();
+            } else {
+                v %= 5;
+                if (v == 0 || v == 3) {
+                    cog = (new SpurCog()).makeCopy();
+                } else if (v == 1 || v == 4) {
+                    cog = (new HelicalCog()).makeCopy();
+                } else if (v == 2) {
+                    cog = (new DefectiveCog()).makeCopy();
+                }
+                if (upgrade) {
+                    cog.upgrade();
+                }
             }
         }
         return cog;

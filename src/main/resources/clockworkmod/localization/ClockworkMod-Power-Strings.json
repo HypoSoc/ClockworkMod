@@ -6,6 +6,13 @@
       " Cog into your draw pile.", " Cogs into your draw pile."
     ]
   },
+  "Clockwork:DefectiveParts": {
+    "NAME": "Defective Parts",
+    "DESCRIPTIONS": [
+      "All Cogs you create are Defective. Defective Cogs deal #b",
+      " additional damage."
+    ]
+  },
   "Clockwork:ElasticNanites": {
     "NAME": "Elastic Nanites",
     "DESCRIPTIONS": [
@@ -48,6 +55,13 @@
     "DESCRIPTIONS": [
       "Whenever you play a card this turn gain #b",
       " Strength and #b", " Dexterity until the end of the turn."
+    ]
+  },
+  "Clockwork:ReactiveNanites": {
+    "NAME": "Reactive Nanites",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain #b",
+      " Thorns and #b", " Plated Armor."
     ]
   },
   "Clockwork:Stasis": {
