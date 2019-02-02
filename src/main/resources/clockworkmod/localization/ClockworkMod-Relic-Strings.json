@@ -54,6 +54,15 @@
     ]
   },
 
+  "Clockwork:QuicksilverHourglass": {
+    "NAME": "Quicksilver Hourglass",
+    "FLAVOR": "A repurposed egg timer with some glitter mixed in with the sand.",
+    "DESCRIPTIONS": [
+      "At the start of your turn, deal #b",
+      " damage to ALL enemies."
+    ]
+  },
+
   "Clockwork:SomewhatSmoothStone": {
     "NAME": "Somewhat Smooth Stone",
     "FLAVOR": "Step One: Fine a Rock. \n Step Two: Apply Angle Grinder. \n Step 3: Profit.",

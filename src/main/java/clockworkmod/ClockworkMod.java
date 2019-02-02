@@ -114,6 +114,7 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
         addRelicToCustomPool(new BloodPhial(), AbstractCardEnum.CLOCKWORK);
         addRelicToCustomPool(new CopperScales(), AbstractCardEnum.CLOCKWORK);
         addRelicToCustomPool(new GoldenCogRelic(), AbstractCardEnum.CLOCKWORK);
+        addRelicToCustomPool(new QuicksilverHourglass(), AbstractCardEnum.CLOCKWORK);
         addRelicToCustomPool(new SomewhatSmoothStone(), AbstractCardEnum.CLOCKWORK);
         addRelicToCustomPool(new Varja(), AbstractCardEnum.CLOCKWORK);
     }
@@ -195,8 +196,10 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
         BaseMod.addCard(new RevUp());
 
         //Rare Attacks
+        BaseMod.addCard(new CraftQuicksilverHourglass());
         BaseMod.addCard(new KaliMa());
         BaseMod.addCard(new Randomization());
+        BaseMod.addCard(new SiegeStrike());
         BaseMod.addCard(new Strangle());
         BaseMod.addCard(new WindupStrike());
 

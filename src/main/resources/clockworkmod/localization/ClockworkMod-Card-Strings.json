@@ -62,6 +62,11 @@
     "DESCRIPTION": "Ethereal. NL Gain !M! Momentum. NL When you Deplete this card, Acquire a Momentum Engine. NL Depleting !clock:dep!"
   },
 
+  "Clockwork:CraftQuicksilverHourglass": {
+    "NAME": "Craft: Q. Hourglass",
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage to ALL enemies. NL When you Deplete this card, Acquire a Quicksilver Hourglass. NL Depleting !clock:dep!"
+  },
+
   "Clockwork:CraftSomewhatSmoothStone": {
     "NAME": "Craft: S. S. Stone",
     "DESCRIPTION": "Ethereal. NL Gain !M! Dexterity. NL When you Deplete this card, Acquire a Somewhat Smooth Stone. NL Depleting !clock:dep!"
@@ -281,6 +286,11 @@
     "NAME": "Selectivity",
     "DESCRIPTION": "Discard your hand. Fetch that many cards from your draw pile. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Retain. NL Discard your hand. Fetch that many cards from your draw pile. NL Exhaust."
+  },
+
+  "Clockwork:SiegeStrike": {
+    "NAME": "Siege Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Deals additional damage equal to your Block. NL Gain !M! Plated Armor."
   },
 
   "Clockwork:Shield": {
