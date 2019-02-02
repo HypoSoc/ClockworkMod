@@ -204,7 +204,10 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
         BaseMod.addCard(new WindupStrike());
 
         //Rare Skills
+        BaseMod.addCard(new AeonShield());
         BaseMod.addCard(new CraftMomentumEngine());
+        BaseMod.addCard(new Halt());
+        BaseMod.addCard(new Inspiration());
         BaseMod.addCard(new TimeWalk());
 
         //Rare Powers

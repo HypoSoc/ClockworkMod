@@ -23,7 +23,7 @@ public class SiegeStrike extends AbstractClockworkCard {
     private static final CardTarget TARGET = CardTarget.ENEMY;
 
     private static final int COST = 1;
-    private static final int POWER = 3;
+    private static final int POWER = 1;
     private static final int MAGIC = 1;
     private static final int UPGRADE_BONUS = 1;
 
@@ -37,9 +37,21 @@ public class SiegeStrike extends AbstractClockworkCard {
         this.tags.add(AbstractCard.CardTags.STRIKE);
     }
 
+    private int getArmor(){
+        int armor = 0;
+        if(AbstractDungeon.player.hasPower("Plated Armor")){
+            armor += AbstractDungeon.player.getPower("Plated Armor").amount;
+        }
+        if(AbstractDungeon.player.hasPower("Metallicize")){
+            armor += AbstractDungeon.player.getPower("Metallicize").amount;
+        }
+        return armor;
+    }
+
     @Override
     public void applyPowers(){
-        this.baseDamage = POWER + AbstractDungeon.player.currentBlock + momentumIncrementor + tinkerIncrementor;
+        this.baseDamage = POWER + AbstractDungeon.player.currentBlock + getArmor() +
+                momentumIncrementor + tinkerIncrementor;
         super.applyPowers();
     }
 

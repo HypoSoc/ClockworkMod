@@ -9,6 +9,12 @@
     "DESCRIPTION": "Gain !B! Block. NL Whenever you play this card, reduce its cost by !M! for this combat."
   },
 
+  "Clockwork:AeonShield": {
+    "NAME": "AeonShield",
+    "DESCRIPTION": "When you draw this card, gain !B! Block. NL Rebound.",
+    "UPGRADE_DESCRIPTION": "When you draw this card, gain !B! Block. NL Every time you play this card, put it back on top of your draw pile."
+  },
+
   "Clockwork:AssemblyLine": {
     "NAME": "Assembly Line",
     "DESCRIPTION": "At the start of each turn, shuffle !M! Cog into your draw pile.",
@@ -49,32 +55,32 @@
 
   "Clockwork:CraftBloodPhial": {
     "NAME": "Craft: Blood Phial",
-    "DESCRIPTION": "Ethereal. NL Heal !M! HP. NL When you Deplete this card, Acquire a Blood Phial. NL Depleting !clock:dep!"
+    "DESCRIPTION": "Ethereal. NL Heal !M! HP. NL When you Deplete this card, Acquire a Blood Phial. NL Depleting !clock:dep!."
   },
 
   "Clockwork:CraftCopperScales": {
     "NAME": "Craft: Copper Scales",
-    "DESCRIPTION": "Ethereal. NL Gain !M! Thorns. NL When you Deplete this card, Acquire Copper Scales. NL Depleting !clock:dep!"
+    "DESCRIPTION": "Ethereal. NL Gain !M! Thorns. NL When you Deplete this card, Acquire Copper Scales. NL Depleting !clock:dep!."
   },
 
   "Clockwork:CraftMomentumEngine": {
     "NAME": "Craft: M. Engine",
-    "DESCRIPTION": "Ethereal. NL Gain !M! Momentum. NL When you Deplete this card, Acquire a Momentum Engine. NL Depleting !clock:dep!"
+    "DESCRIPTION": "Ethereal. NL Gain !M! Momentum. NL When you Deplete this card, Acquire a Momentum Engine. NL Depleting !clock:dep!."
   },
 
   "Clockwork:CraftQuicksilverHourglass": {
     "NAME": "Craft: Q. Hourglass",
-    "DESCRIPTION": "Ethereal. NL Deal !D! damage to ALL enemies. NL When you Deplete this card, Acquire a Quicksilver Hourglass. NL Depleting !clock:dep!"
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage to ALL enemies. NL When you Deplete this card, Acquire a Quicksilver Hourglass. NL Depleting !clock:dep!."
   },
 
   "Clockwork:CraftSomewhatSmoothStone": {
     "NAME": "Craft: S. S. Stone",
-    "DESCRIPTION": "Ethereal. NL Gain !M! Dexterity. NL When you Deplete this card, Acquire a Somewhat Smooth Stone. NL Depleting !clock:dep!"
+    "DESCRIPTION": "Ethereal. NL Gain !M! Dexterity. NL When you Deplete this card, Acquire a Somewhat Smooth Stone. NL Depleting !clock:dep!."
   },
 
   "Clockwork:CraftVarja": {
     "NAME": "Craft: Varja",
-    "DESCRIPTION": "Ethereal. NL Gain !M! Strength. NL When you Deplete this card, Acquire a Varja. NL Depleting !clock:dep!"
+    "DESCRIPTION": "Ethereal. NL Gain !M! Strength. NL When you Deplete this card, Acquire a Varja. NL Depleting !clock:dep!."
   },
 
   "Clockwork:DefectiveCog": {
@@ -85,8 +91,8 @@
 
   "Clockwork:Downsize": {
     "NAME": "Downsize",
-    "DESCRIPTION": "Permanently remove a non-Curse card from your deck. NL Depleting !clock:dep!",
-    "UPGRADE_DESCRIPTION": "Give a non-curse card Fleeting. It costs 0. NL Depleting !clock:dep!"
+    "DESCRIPTION": "Permanently remove a non-Curse card from your deck. NL Depleting !clock:dep!.",
+    "UPGRADE_DESCRIPTION": "Give a non-curse card Fleeting. It costs 0. NL Depleting !clock:dep!."
   },
 
   "Clockwork:Efficiency": {
@@ -133,6 +139,11 @@
     "UPGRADE_DESCRIPTION": "Add !M! Cogs to your hand. NL Acquire a Golden Cog. NL Fleeting."
   },
 
+  "Clockwork:Halt": {
+    "NAME": "Halt",
+    "DESCRIPTION": "Stun ALL enemies. NL Depleting !clock:dep!."
+  },
+
   "Clockwork:HeadStart": {
     "NAME": "Head Start",
     "DESCRIPTION": "Innate. NL Deal !D! damage. NL If it is your first turn, gain [E] [E]",
@@ -154,6 +165,12 @@
     "NAME": "Improve",
     "DESCRIPTION": "Draw a card and Upgrade it for the rest of combat.",
     "UPGRADE_DESCRIPTION": "Draw a card and Upgrade it for the rest of combat. NL If it is already upgraded, reduce its cost by !M! for the rest of combat."
+  },
+
+  "Clockwork:Inspiration": {
+    "NAME": "Inspiration",
+    "DESCRIPTION": "Fetch a Craft card from your draw pile. It costs 0 this turn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Fetch a Craft card from your draw pile. It costs 0 this turn. NL If you have none, instead draw !M! cards. NL Exhaust."
   },
 
   "Clockwork:InertialShield": {
@@ -290,7 +307,7 @@
 
   "Clockwork:SiegeStrike": {
     "NAME": "Siege Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Deals additional damage equal to your Block. NL Gain !M! Plated Armor."
+    "DESCRIPTION": "Deal !D! damage. NL Deals additional damage equal to your Block and Armor. NL Gain !M! Plated Armor."
   },
 
   "Clockwork:Shield": {
@@ -300,7 +317,7 @@
 
   "Clockwork:SmithsMallet": {
     "NAME": "Smith's Mallet",
-    "DESCRIPTION": "Deal !D! damage. NL Permanently Upgrade a card in your hand. NL Depleting !clock:dep!"
+    "DESCRIPTION": "Deal !D! damage. NL Permanently Upgrade a card in your hand. NL Depleting !clock:dep!."
   },
 
   "Clockwork:SnapKeep": {
