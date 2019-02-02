@@ -222,6 +222,12 @@
     "DESCRIPTION": "Deal !D! damage."
   },
 
+  "Clockwork:PerfectForm": {
+    "NAME": "Perfect Form",
+    "DESCRIPTION": "Ethereal. At the start of each turn, choose a card. Upgrade it, reduce its cost by 1, and increase its damage and Block by !M!.",
+    "UPGRADE_DESCRIPTION": "At the start of each turn, choose a card. Upgrade it, reduce its cost by 1, and increase its damage and Block by !M!."
+  },
+
   "Clockwork:PerfectedShield": {
     "NAME": "Perfected Shield",
     "DESCRIPTION": "Gain !B! Block. NL Gains !M! additional Block for ALL your cards containing \"Shield\"."

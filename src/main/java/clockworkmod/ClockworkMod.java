@@ -211,6 +211,7 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
         BaseMod.addCard(new TimeWalk());
 
         //Rare Powers
+        BaseMod.addCard(new PerfectForm());
         BaseMod.addCard(new UnlimitedCogworks());
         BaseMod.addCard(new ZeroPointEnergy());
 

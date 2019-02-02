@@ -13,13 +13,6 @@
       " Buffer."
     ]
   },
-  "Clockwork:OccamsRazor": {
-    "NAME": "Occam's Razor",
-    "DESCRIPTIONS": [
-      "At the start of your turn, you may Exhaust up to #b",
-      " card.", " cards."
-    ]
-  },
   "Clockwork:LiteraryArmor": {
     "NAME": "Literary Armor",
     "DESCRIPTIONS": [
@@ -32,6 +25,22 @@
     "DESCRIPTIONS": [
       "After you play a card, increase its damage and Block by #b",
       " for the rest of combat."
+    ]
+  },
+  "Clockwork:OccamsRazor": {
+    "NAME": "Occam's Razor",
+    "DESCRIPTIONS": [
+      "At the start of your turn, you may Exhaust up to #b",
+      " card.", " cards."
+    ]
+  },
+  "Clockwork:PerfectForm": {
+    "NAME": "Perfect Form",
+    "DESCRIPTIONS": [
+      "At the start of your turn, choose a card. Upgrade it, reduce its cost by #b",
+      ", and increase its damage and Block by #b",
+      "At the start of your turn, choose #b", " cards. Upgrade them, reduce their cost by #b",
+      ", and increase their damage and Block by #b", " until the end of combat.",
     ]
   },
   "Clockwork:RampUp": {
