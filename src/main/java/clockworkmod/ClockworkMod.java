@@ -106,8 +106,15 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
         // Starter
         addRelicToCustomPool(new MomentumEngine(), AbstractCardEnum.CLOCKWORK);
 
+        // Rare
+        addRelicToCustomPool(new BreathingRoom(), AbstractCardEnum.CLOCKWORK);
+
         // Boss
+        addRelicToCustomPool(new BootleggersToolkit(), AbstractCardEnum.CLOCKWORK);
         addRelicToCustomPool(new PerpetualMotionMachine(), AbstractCardEnum.CLOCKWORK);
+
+        // Shop
+        addRelicToCustomPool(new RubberBall(), AbstractCardEnum.CLOCKWORK);
 
         // Special
         addRelicToCustomPool(new BeatingHeart(), AbstractCardEnum.CLOCKWORK);

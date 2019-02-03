@@ -17,12 +17,30 @@
     ]
   },
 
+  "Clockwork:BootleggersToolkit": {
+    "NAME": "Bootlegger's Toolkit",
+    "FLAVOR": "Everything you need to make your own relics.",
+    "DESCRIPTIONS": [
+      "At the start of combat, shuffle a random #yCraft card into your deck."
+    ]
+  },
+
+  "Clockwork:BreathingRoom": {
+    "NAME": "Breathing Room",
+    "FLAVOR": "Take a moment to gather your thoughts.",
+    "DESCRIPTIONS": [
+      " NL Lose #b1 charge, add a copy of #yWarm #yUp to your hand. NL Whenever you enter a Rest Site, add #b",
+      " charge. NL Starts with #b",
+      " charges."
+    ]
+  },
+
   "Clockwork:CopperScales": {
     "NAME": "Copper Scales",
     "FLAVOR": "A hodgepodge of metal inspired by (and stolen from) the Guardian.",
     "DESCRIPTIONS": [
       "At the start of combat, gain #b",
-      " Thorns."
+      " #yThorns."
     ]
   },
 
@@ -31,8 +49,8 @@
     "FLAVOR": "Not very practical, but so very stylish.",
     "DESCRIPTIONS": [
       "At the start of combat, add #b",
-      " Cog to your hand.",
-      " Cogs to your hand."
+      " #yCog to your hand.",
+      " #yCogs to your hand."
     ]
   },
 
@@ -41,7 +59,7 @@
     "FLAVOR": "Provides the power to keep on going.",
     "DESCRIPTIONS": [
       "At the start of combat, gain #b",
-      " Momentum."
+      " #yMomentum."
     ]
   },
 
@@ -63,12 +81,20 @@
     ]
   },
 
+  "Clockwork:RubberBall": {
+    "NAME": "Rubber Ball",
+    "FLAVOR": "Bouncy.",
+    "DESCRIPTIONS": [
+      "The first card you play each turn (that doesn't #yExhaust or already have #yRebound) has #yRebound."
+    ]
+  },
+
   "Clockwork:SomewhatSmoothStone": {
     "NAME": "Somewhat Smooth Stone",
     "FLAVOR": "Step One: Fine a Rock. \n Step Two: Apply Angle Grinder. \n Step 3: Profit.",
     "DESCRIPTIONS": [
       "At the start of combat, gain #b",
-      " Dexterity."
+      " #yDexterity."
     ]
   },
 
@@ -77,7 +103,7 @@
     "FLAVOR": "A papier-mâché ornament meant to invoke the glory of warriors.",
     "DESCRIPTIONS": [
       "At the start of combat, gain #b",
-      " Strength."
+      " #yStrength."
     ]
   }
 }
