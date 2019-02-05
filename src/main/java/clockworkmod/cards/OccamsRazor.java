@@ -25,7 +25,6 @@ public class OccamsRazor extends AbstractClockworkCard {
     public OccamsRazor()
     {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
-        this.isInnate = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)

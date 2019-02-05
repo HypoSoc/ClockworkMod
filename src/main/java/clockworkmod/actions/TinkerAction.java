@@ -28,7 +28,7 @@ public class TinkerAction extends AbstractGameAction {
 
     private boolean isTinkerable(AbstractCard c){
         if(c instanceof AbstractClockworkCard){
-            if(c.baseBlock >= 0 || c.baseDamage >= 0){
+            if(c.baseBlock > 0 || c.baseDamage > 0){
                 return true;
             }
         }

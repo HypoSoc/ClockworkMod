@@ -9,7 +9,7 @@
   "Clockwork:DefectiveParts": {
     "NAME": "Defective Parts",
     "DESCRIPTIONS": [
-      "All Cogs you create are Defective. Defective Cogs deal #b",
+      "All Cogs you create are Defective and have a chance to be Upgraded. Defective Cogs deal #b",
       " additional damage."
     ]
   },

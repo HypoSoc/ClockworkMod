@@ -91,7 +91,7 @@
 
   "Clockwork:DefectiveParts": {
     "NAME": "Defective Parts",
-    "DESCRIPTION": "All Cogs you create are Defective. NL Defective Cogs deal !M! additional damage."
+    "DESCRIPTION": "All Cogs you create are Defective, and have a chance to be Upgraded. NL Defective Cogs deal !M! additional damage."
   },
 
   "Clockwork:Downsize": {
@@ -286,7 +286,7 @@
   "Clockwork:RevUp": {
     "NAME": "Rev Up",
     "DESCRIPTION": "Gain !M! Momentum.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Gain !M! Momentum."
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Gain !M! Momentum."
   },
 
   "Clockwork:RitualDaggerMk0": {
@@ -344,8 +344,8 @@
 
   "Clockwork:SpurCog": {
     "NAME": "Spur Cog",
-    "DESCRIPTION": "Deal !D! damage. NL Draw !M! card. NL Exhaustive !stslib:ex!.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Draw !M! cards. NL Exhaustive !stslib:ex!."
+    "DESCRIPTION": "Deal !D! damage to a random enemy. NL Draw !M! card. NL Exhaustive !stslib:ex!.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to a random enemy. NL Draw !M! cards. NL Exhaustive !stslib:ex!."
   },
 
   "Clockwork:SpurOn": {
@@ -421,7 +421,7 @@
   "Clockwork:UnlimitedCogworks": {
     "NAME": "Unlimited Cogworks",
     "DESCRIPTION": "Whenever you draw 7 cards in a turn, add !M! Cog to your hand.",
-    "UPGRADE_DESCRIPTION": "Whenever you draw 7 cards in a turn, add !M! Cog to your hand. If you ever have 7 Cogs in your hand, Exhaust them all and deal 50 damage to ALL enemies."
+    "UPGRADE_DESCRIPTION": "Whenever you draw 7 cards in a turn, add !M! Cog to your hand. If you ever have 7 Cogs in your hand, Play and Exhaust them all and deal 50 damage to ALL enemies."
   },
 
   "Clockwork:WarmUp": {

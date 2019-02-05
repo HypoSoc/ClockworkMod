@@ -277,7 +277,7 @@ public class ClockworkMod implements EditCharactersSubscriber, EditStringsSubscr
         AbstractCard cog = (new SpurCog()).makeCopy();
         if(AbstractDungeon.player.hasPower("Clockwork:DefectiveParts")){
             cog = (new DefectiveCog()).makeCopy();
-            if (upgrade) {
+            if (upgrade || (AbstractDungeon.cardRandomRng.random(200)%5 == 0)) {
                 cog.upgrade();
             }
         }

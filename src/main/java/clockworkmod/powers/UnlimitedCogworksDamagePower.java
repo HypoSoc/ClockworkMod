@@ -2,6 +2,7 @@ package clockworkmod.powers;
 
 import clockworkmod.ClockworkMod;
 import clockworkmod.actions.DelayedPowerTriggerAction;
+import clockworkmod.actions.ForcePlayCardAction;
 import clockworkmod.cards.GoldenCog;
 import clockworkmod.patches.TagEnum;
 import com.badlogic.gdx.graphics.Texture;
@@ -53,8 +54,9 @@ public class UnlimitedCogworksDamagePower extends AbstractClockworkPower {
         if(cogs.size() >= BOOM){
             for(AbstractCard c : cogs){
                 if(! (c instanceof GoldenCog)) {    // It would be cruel to burn gold
+                    c.exhaust = true;
                     AbstractDungeon.actionManager.addToBottom(
-                            new ExhaustSpecificCardAction(c, AbstractDungeon.player.hand));
+                            new ForcePlayCardAction(c, null, true));
                 }
             }
             AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(AbstractDungeon.player,

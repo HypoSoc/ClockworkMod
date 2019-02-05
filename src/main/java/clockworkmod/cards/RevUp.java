@@ -2,6 +2,7 @@ package clockworkmod.cards;
 
 import clockworkmod.powers.MomentumPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -20,18 +21,24 @@ public class RevUp extends AbstractClockworkCard {
     private static final CardTarget TARGET = CardTarget.SELF;
 
     private static final int COST = 2;
+    private static final int BLOCK = 0;
     private static final int MAGIC = 1;
+    private static final int UPGRADE_BONUS = 5;
 
     public RevUp()
     {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
+        this.baseBlock = BLOCK;
         this.baseMagicNumber = MAGIC;
         this.magicNumber = this.baseMagicNumber;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)
     {
+        if(upgraded){
+            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
+        }
         AbstractDungeon.actionManager.addToBottom(
                 new ApplyPowerAction(p, p, new MomentumPower(p, this.magicNumber), this.magicNumber));
     }
@@ -46,7 +53,7 @@ public class RevUp extends AbstractClockworkCard {
         if (!this.upgraded)
         {
             upgradeName();
-            this.isInnate = true;
+            upgradeBlock(UPGRADE_BONUS);
             this.rawDescription = strings.UPGRADE_DESCRIPTION;
             initializeDescription();
         }

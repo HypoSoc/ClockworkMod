@@ -21,7 +21,7 @@ public class DefectiveParts extends AbstractClockworkCard {
 
     private static final int COST = 1;
     private static final int MAGIC = 5;
-    private static final int UPGRADE_BONUS = 5;
+    private static final int UPGRADE_BONUS = 10;
 
     public DefectiveParts()
     {
